@@ -47,7 +47,7 @@
         if (!a && !s) {
             var r = e.navigator.userAgent, j = (!!r.match(/android/gi), !!r.match(/iphone/gi)), q = j && !!r.match(/OS 9_3/), m = e.devicePixelRatio;
             a = j && !q ? m >= 3 && (!a || a >= 3) ? 3 : m >= 2 && (!a || a >= 2) ? 2 : 1 : 1, s = 1 / a
-        }
+        }   
         if (d.setAttribute("data-dpr", a), !l) {
             if (l = t.createElement("meta"), l.setAttribute("name", "viewport"), l.setAttribute("content", "initial-scale=" + s + ", maximum-scale=" + s + ", minimum-scale=" + s + ", user-scalable=no"), d.firstElementChild) {
                 d.firstElementChild.appendChild(l)
