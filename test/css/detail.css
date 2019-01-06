@@ -1,0 +1,131 @@
+@CHARSET "UTF-8"; 
+/* 左侧 */
+.detail-mian{
+	width:100%;
+}
+
+.detail-mian .title h2 a{
+	font-size: 28px;
+	font-weight: bold;
+}
+.detail-mian .title .down_tit{
+	font-size:18px;
+	color:#7e7e7e;
+}
+.detail-mian .title .down_tit a{
+	margin-right:50px;
+	margin-left:15px;
+	color:#000;
+}
+.detail-mian .title .down_see{
+	
+}
+.detail-mian .title .down_see a{
+	display:inine-block;
+	width:110px;
+	height:30px;
+}
+.detail-mian .title .down_see a span{
+	display:inline-block;
+	width:15px;
+	height:15px;
+	background:url(./../../../img/sprite.png) no-repeat;
+}
+.detail-mian .title .down_see a.down_load span{
+	background-position: px px;
+}
+.detail-mian .title .down_see a.see_detail span{
+	background-position: px px;
+}
+.detail-mian .title .abstract{
+	background-color:#ccc;
+}
+/* 详情图片轮播 */
+#detail-tab{
+	margin: 20px 0;
+	padding: 0px;
+	border: 0;
+	width:100%;
+	overflow:hidden;
+}
+#detail-tab ul.big_pics{
+	
+}
+#detail-tab ul.big_pics li{
+	float:left;
+}
+#detail-tab ul.big_pics li a{
+	
+}
+#detail-tab ul.big_pics li a img{
+	width:880px;
+	height:650;
+}
+#detail-tab .small_pics{
+	width:100%;
+	height:120px;
+	background-color:#;
+}
+
+#detail-tab .small_pics span{
+	display:inline-block;
+	width:50px;
+	background:url('./../../../img/sprite.png') no-repeat;
+	height:50px;
+}
+
+#detail-tab .small_pics span.prev{
+	background-position:px px;
+}
+
+#detail-tab .small_pics span.next{
+	background-position:px px;
+}
+
+#detail-tab .small_pics ul{
+	margin:5px auto;
+	width:730px;
+	height:110px;
+}
+#detail-tab .small_pics ul li{
+	float:left;
+}
+
+#detail-tab .small_pics ul li a img{
+	height:110px;
+}
+/* 网站简介,客户评价 */
+.introduction{
+	margin-bottom: 30px;
+}
+.introduction h2{
+	margin-bottom: 10px;
+}
+.introduction p{
+	line-height: 25px;
+	text-indent: 23px;
+}
+
+/*右侧->最新案例*/
+.detail-mr{
+	border:solid 1px #eee;
+	margin-bottom: 20px;
+}
+.detail-mr .datail-mr-title{
+	border-bottom: solid 1px #E1E6F6;
+	padding: 5px 0;
+	margin-bottom: 10px;
+}
+.datail-mr-title h2{
+	border-left: solid 5px red;
+	text-indent: 10px;
+}
+/* 右侧->内容  */
+
+.detail-information ul li{
+	margin: 10px auto 0;
+	width: 262px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}

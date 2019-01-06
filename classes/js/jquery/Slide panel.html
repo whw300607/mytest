@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	div.panel,
+	p.flip{background:#e5eecc;text-align:center;}
+	div.panel{display:none;height:120px;}
+</style>
+<script type="text/javascript" src="../jquery-1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".flip").click(function(){
+			$(".panel").slideToggle("slow");
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="panel">
+		<p>w3c专业的建站教学平台</p>
+		<p>在这里你可以找到很多教程</p>
+	</div>
+	<p class="flip">请点击这里</p>
+</body>
+</html> 

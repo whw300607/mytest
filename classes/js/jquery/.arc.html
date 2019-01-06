@@ -1,0 +1,16 @@
+<html>
+<body>
+
+<canvas id="myCanvas" width="300" height="150" style="border:1px solid #d3d3d3;">
+您的浏览器不支持 HTML5 canvas 标签。</canvas>
+
+<script type="text/javascript">
+	var c=document.getElementById("myCanvas");
+	var ctx=c.getContext("2d");
+	ctx.beginPath();
+	ctx.arc(0,0,50,0, Math.PI * 2, false);	 //arc(0,0,50,0, Math.PI * 2, false)圆心横坐标，圆心纵坐标，半径，起始点，终止点，顺时针（false），逆时针（true）
+	ctx.stroke();
+</script> 
+
+</body>
+</html>

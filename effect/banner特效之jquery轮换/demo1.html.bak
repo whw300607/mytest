@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Document</title>
+  <link href="css/style.css" type="text/css" rel="stylesheet"/>
+  <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+ </head>
+ <body>
+
+	<h2>Banner多图自动切换之左右</h2>
+	
+	<div id="demo1" class="banner_left">
+		<ul>
+			<li class="img_1"></li>
+			<li class="img_2"></li>
+			<li class="img_3"></li>
+			<li class="img_4"></li>
+			<li class="img_5"></li>
+			<li class="img_6"></li>
+		</ul>
+		<ol>
+			<li class="btn_1">PC</li>
+			<li class="btn_2">APP</li>
+			<li class="btn_3">微信</li>
+			<li class="btn_4">培训班</li>
+			<li class="btn_5">商城</li>
+			<li class="btn_6">博客</li>
+		</ol>
+	</div>
+<h2>Banner多图自动切换之淡入淡出</h2>
+	<div id="demo2" class="banner_fade">
+		<ul>
+			<li class="img_1" style="display:block;"></li>
+			<li class="img_2"></li>
+			<li class="img_3"></li>
+			<li class="img_4"></li>
+			<li class="img_5"></li>
+			<li class="img_6"></li>
+		</ul>
+		<ol>
+			<li class="btn_1">PC</li>
+			<li class="btn_2">APP</li>
+			<li class="btn_3">微信</li>
+			<li class="btn_4">培训班</li>
+			<li class="btn_5">商城</li>
+			<li class="btn_6">博客</li>
+		</ol>
+	</div>
+
+
+	
+
+<script type="text/javascript">
+	$(function(){
+		var banner_left=function(idname){
+			var view_width=1200;//可视宽度
+			var view_height=400;//可视高度
+			var obj_ul=$('#'+idname+' ul');
+			var liobj=obj_ul.find('li');
+			obj_ul.css('width',(liobj.length*view_width)+'px');
+			//预览按钮
+			var btn_li=$('#'+idname+' ol li');
+			btn_li.css('width',(view_width/btn_li.length)+'px');
+			//按钮事件
+			btn_li.click(function(){
+				var cthis=$(this);
+				var ul_block=cthis.parent('ol').prev('ul');
+				ul_block.animate({left:'-'+(cthis.index()*view_width)+'px'},1000);
+			});
+		};
+
+		var banner_fade=function(idname){
+			var view_width=1200;//可视宽度
+			var view_height=400;//可视高度
+			var obj_ul=$('#'+idname+' ul');
+			var liobj=obj_ul.find('li');
+			obj_ul.css('width',(liobj.length*view_width)+'px');
+			//预览按钮
+			var btn_li=$('#'+idname+' ol li');
+			btn_li.css('width',(view_width/btn_li.length)+'px');
+			//按钮事件
+			btn_li.click(function(){
+				console.log(Math.floor((Math.random()*10))%2);
+				var cthis=$(this);
+				var index=cthis.index();
+				var ul_block=cthis.parent('ol').prev('ul');
+				if(Math.floor((Math.random()*10))%2==0){
+				ul_block.find('li').fadeOut().eq(index).fadeIn();
+				}else{
+				ul_block.find('li').slideUp().eq(index).slideDown();
+				}
+			});
+		};
+
+		banner_left('demo1');
+		banner_fade('demo2');
+
+
+
+
+	
+		
+	});
+</script>
+
+ </body>
+</html>

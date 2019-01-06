@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+    <title>overflow：hidden</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="#" />
+    <style>
+        body{padding-left:500px;}
+       .upload-img{overflow:hidden;}
+      .upload-img .add_img{position:absolute;filter: alpha(opacity=0);-moz-opacity: 0;-khtml-opacity: 0;opacity: 0;background: none;border: none;cursor: pointer;}
+      .upload-img img{width:110px;height:30px;}
+    </style>
+</head>
+<body>
+    <div class="upload-img">
+        <input type="file"  class="add_img w_110 h_30" />
+        <img src="add_pic.png" alt="上传照片" title="">
+    </div>
+</body>
+</html>

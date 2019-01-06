@@ -1,0 +1,13 @@
+div,dl,dd,dt,p{margin: 0}
+#wrap{position:relative;width:500px;margin:50px auto 0;padding:20px;border: 1px solid #ea5415}
+#wrap .l_arrw,
+#wrap .r_arrw{position: absolute;top:110px;width: 20px;height: 80px;cursor: pointer;}
+#wrap .l_arrw{left: 0}
+#wrap .r_arrw{right:0}
+#wrap #imgcon{position:relative;width: 480px;height: 230px;margin:30px auto;overflow: hidden;}/*相对定位，且有高度*/
+#wrap #imgcon #scrollimg{position: absolute;left:0;width: 1000%;}/*绝对定位，left为0*/
+#wrap #imgcon dl{width: 150px;float:left;margin:0 5px;}
+#wrap #imgcon dl dt{margin: 0}
+#wrap #imgcon dl dt img{margin:0 0 10px;width:150px;height: 150px;}
+#wrap #imgcon dl dd{width: 100%;margin:0;font-size:14px;text-align: center;line-height: 20px;}
+#wrap #imgcon dl dd a{text-decoration: none;}

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>siblings1</title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("div").siblings(".selected").css("background","yellow");
+	});	
+</script>
+</head>
+<body>
+	<div><span>hello span</span></div>
+	<p class="selected">hello again</p>
+	<p>and again</p>
+</body>
+</html>

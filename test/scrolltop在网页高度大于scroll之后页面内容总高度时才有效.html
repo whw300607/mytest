@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link type="text/css" href="css/common.css" rel="stylesheet" />
+	<link type="text/css" href="css/global.css" rel="stylesheet" />
+	<script type="text/javascript" src="../classes/js/jquery-1.11.1/jquery.min.js"></script>
+	<style type="text/css">
+		#comt{height:20px;background-color:yellow;}
+		#xia{width:100px;height:50px;background-color:red;}
+		#shang{width:100px;height:50px;background-color:blue;}
+		#blank{height:2500px;background-color:#ccc;}
+		#comments{height:2500px;background-color:#999;}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#shang').click(function(){
+				$('html,body').animate({scrollTop: '0px'}, 800);
+				});
+			$('#comt').click(function(){
+				$('html,body').animate({scrollTop:$('#comments').offset().top}, 800);
+				});
+			$('#xia').click(function(){
+				$('html,body').animate({scrollTop:$('#footer').offset().top}, 800);
+				});
+			});
+	</script>
+</head>
+<body>
+	<div class="m">
+		<div id="xia"></div>
+		<div id="comt"></div>
+		<div id="blank"></div>
+		<div id="comments"></div>
+		<div id="shang"></div>
+	</div>
+</body>
+</html> 

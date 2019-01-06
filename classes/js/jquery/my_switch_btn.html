@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+	li{list-style-type:none;}
+	ul.tit{width:200px;}
+	ul.tit li{float:left;margin-right:15px;color:#000;cursor:pointer;}	
+	ul.tit li.cur{color:#ea5415;}
+	.cont{width:200px;text-indent:28px;}
+	.cont .none{display:none;}
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript"> 
+	$(document).ready(function(){
+		$("li").click(function(){
+			$(this).addClass("cur").siblings().removeClass("cur");
+			$(".cont").find("div").eq($(this).index()).removeClass("none").siblings().addClass("none");
+		});
+	});
+</script> 
+</head>
+ 
+<body>
+	<ul class="tit">
+		<li class="cur">推荐阅读</li>
+		<li>热门观点</li>
+	</ul>
+	<div class="cont">
+		<div>
+			<p>第一块第一块第一块</p>
+			<p>第一块第一块第一块</p>
+			<p>第一块第一块第一块</p>
+			<p>第一块第一块第一块</p>
+		</div>
+		<div class="none">
+			<p>第二块第二块第二块</p>
+			<p>第二块第二块第二块</p>
+			<p>第二块第二块第二块</p>
+			<p>第二块第二块第二块</p>
+		</div>
+	</div>
+</body>
+</html>

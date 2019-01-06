@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/* function myName() {
+			 i = 'yuanjianhang';
+			}
+			myName();
+			function sayName() {
+			 alert(i);
+			}
+			sayName(); */ //全局变量
+			/* function myName() {
+				 var i='yuanjianhang';
+				}
+				myName();
+				function sayName() {
+				 alert(i);
+				}
+				sayName(); */
+		/* 		
+		function myName() {
+			 i = 'yuanjianhang';
+			}
+			function sayName() {
+			 alert(i);
+			}
+			sayName();    //此时，游览器也不会有如何反应。因为虽然i是全局变量，但是函数myName()并没有被调用，所以就相当于虽然声明了i，但是并没有给i赋予任何的值，所以没有任何输出。
+	 */
+			/* function myName() {
+				 
+				 i = 'yuanjianhang';
+				}
+				function sayName() {
+				 alert(i);
+				}
+				sayName();
+				myName();	//这种情况下还是不会输出任何结果，javascript代码的执行时从上到下的，在sayName()函数被调用时会检查变量i的值，此时函数myName尚未执行，也就是说i还没有被赋值，所以不会输出任何结果。
+				 */
+				/* var i = 'yuanjianhang';
+				function myloveName() {
+				 i = 'guanxi';
+				}
+				myloveName();
+				function myName() {
+				 alert(i);
+				}
+				myName();	//首先，i的原始值是yuanjianhang，但是当调用myloveName()函数之后，将i的值改为guanxi，所以最后的输出结果是guanxi。
+				 */
+				/* var i = 'yuanjianhang';
+				function myloveName() {
+				 var i = 'guanxi';
+				}
+				myloveName();
+				function myName() {
+				 alert(i);
+				}
+				myName();	//代码中的两个i不一样，一个是全局的，一个是局部的，也可以这样理解，虽然两个i的名字一样，但是这两个i的本质却不一样，好像有两个名字一样的人一样，虽然名字一样，但却不是同一个人。
+				 */
+	/* 	var i = 'yuanjianhang';
+		function myloveName() {
+		  alert(i);
+		 i = 'guanxi';
+		}
+		myloveName();	//undefined但是并不是undefined */
+		
+		var foo = 1;
+		function main(){
+		alert(foo);
+		var foo = 2;
+		alert(this.foo)
+		this.foo = 3;
+		}
+		var m1 = main();
+	});
+</script>
+</head>
+<body>
+	
+</body>
+</html>

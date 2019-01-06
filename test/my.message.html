@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link type="text/css" href="css/common.css" rel="stylesheet" />
+<link type="text/css" href="css/global.css" rel="stylesheet" />
+<link type="text/css" href="css/font-awesome.css" rel="stylesheet" />
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="../classes/js/dialog.js"></script>
+<script type="text/javascript" src="../classes/js/my.js"></script>
+<style type="text/css">
+	body{font-size:14px;}
+	.item{}
+	.item .top{height:50px;line-height:50px;cursor:pointer;}	
+	.item .top:hover{background-color:#CAF8FF;}
+	.item .top span.msg_state{font-size: 22px;}	
+	[class^="icon-"],[class*="icon-"]{margin-right:30px;font-size:20px;}
+</style>
+<script type="text/javascript">
+/* 	$(".operations").find(".all_read").click(function(){
+		var d=dialog({
+			title:'信息',
+			content:'确定将所有订阅消息设置为已读？',
+			width:'260px',
+			height:'30px',
+			fixed:true,
+			okValue:'确定',
+			ok:function(){
+				$.post(exports.fun.U('User/User/jfLoginOut'),{},function(dat){
+					window.location.href=exports.fun.U('User/Home/message');
+				});
+				return false;
+			}
+		});
+		d.showModal();
+	}); */
+
+	$(document).ready(function(){
+		/* 全部标为已读 */
+		$(".operations .all_read").click(function(){
+			alert("确定全部标为已读？")
+			$(".msg_state").removeClass("font-blue").addClass("font-grayer");
+		});
+		
+		/* 清空全部信息 */
+		$(".operations .clear_all").click(function(){
+			alert("确定全部删除么！");
+			$(".msg_state").removeClass("font-blue").addClass("font-grayer");
+		});
+		
+		/* 删除本条信息提示 */
+		$(".icon-remove").click(function(){
+			alert("确定删除本条信息？");
+		});
+		
+		/* 鼠标移入箭头和叉号出现 */
+		$(".item").find(".top").hover(function(){
+			$(this).find(".arrw,.icon-remove").show();
+			},function(){
+				$(this).find(".arrw,.icon-remove").hide();
+				});
+		
+		/* 点击信息标题后下方文字切换显示隐藏，箭头切换朝上朝下 */
+		$(".item>.top").click(function(){
+			$(this).parent().find("p").slideToggle();
+			if($(this).find(".msg_state").attr("state")==""){
+				$(this).find(".msg_state").removeClass("font-blue").addClass("font-grayer");
+				$(this).find(".arrw").removeClass("icon-chevron-down").addClass("icon-chevron-up");
+				$(this).find(".msg_state").attr("state","checked");					  
+			}
+			else{
+				$(this).find(".arrw").removeClass("icon-chevron-up").addClass("icon-chevron-down");
+				$(this).find(".msg_state").attr("state","");
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="m">
+		<div class="operations">
+			<span class="all_read icon-check" title="全部标为已读">全部标为已读</span>
+			<span class="clear_all icon-trash" title="清空已读消息">清空已读消息</span>
+		</div>
+		<div class="item mt10">
+			<div class="top">
+				<span class="msg_state icon-envelope font-blue" state=""></span>
+				妖精铃铛3期项目满标2016-07-13 10:25:16
+				<span class="arrw icon-chevron-down hide"></span>
+				<span class="icon-remove hide"></span>
+			</div>	
+			<p class="p20 none">
+				sunring 发布了新项目《淡定1期》，项目金额：90000 ~ 270000 元, 操盘周期：T+40，止损比例：-12 %，项目起投时间：2016-07-14
+				14:00:00，项目链接:http://www.taogushen.com/project/2736 
+			</p>
+		</div>
+		<div class="item mt10">
+			<div class="top">
+				<span class="msg_state icon-envelope font-blue" state=""></span>
+				妖精铃铛3期项目满标2016-07-13 10:25:16
+				<span class="arrw icon-chevron-down hide"></span>
+				<span class="icon-remove hide"></span>
+			</div>	
+			<p class="p20 none">
+				sunring 发布了新项目《淡定1期》，项目金额：90000 ~ 270000 元, 操盘周期：T+40，止损比例：-12 %，项目起投时间：2016-07-14
+				14:00:00，项目链接:http://www.taogushen.com/project/2736 
+			</p>
+		</div>
+		<div class="item mt10">
+			<div class="top">
+				<span class="msg_state icon-envelope font-blue" state=""></span>
+				妖精铃铛3期项目满标2016-07-13 10:25:16
+				<span class="arrw icon-chevron-down hide"></span>
+				<span class="icon-remove hide"></span>
+			</div>	
+			<p class="p20 none">
+				sunring 发布了新项目《淡定1期》，项目金额：90000 ~ 270000 元, 操盘周期：T+40，止损比例：-12 %，项目起投时间：2016-07-14
+				14:00:00，项目链接:http://www.taogushen.com/project/2736 
+			</p>
+		</div>
+	</div>
+</body>
+</html>

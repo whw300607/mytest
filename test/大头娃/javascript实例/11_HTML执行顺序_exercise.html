@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<script type="text/javascript">
+	console.info("top script");
+</script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script type="text/javascript">
+	console.info("head script");
+</script>
+<script type="text/javascript">
+	<!-- 根据ul的提示写出测试案例 -->
+</script>
+<script type="text/javascript">
+	<!-- 根据ul的提示写出测试案例 -->
+</script>
+<script type="text/javascript" src="other/fn.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>JavaScript执行顺序</title>
+</head>
+<body>
+<script type="text/javascript">
+	console.info("body script");
+</script>
+<ul>
+	<li>默认情况下,浏览器是从上而下解析html代码,当然script嵌入在html中,因此也会按照此顺序,并且外面引入的文件也不会修改此顺序</li>
+    <li>当解析到script则会调用js解析器,通常js解析器是先预编译,在解析执行.解析器对(变量和函数的声明进行了预编译)</li>
+    <li>js解析器是按照script片段来预编译和解析的,先预编译第一script片段然后执行,然后在编译第二script片段然后执</li>
+    <li>在解析执行某个script代码片段是,如果此代码段有问题,则会停止执行当前script后面的代码,但是对后面的script不受影响</li>
+    <li>在编写js代码的时候,尽量变量和函数都是先声明后使用.2: 因为变量可以在不同的代码片段中共享,因此局部变量应当放到函数中</li>
+</ul>
+</body>
+</html>
+<script type="text/javascript">
+	console.info("end script");
+</script>

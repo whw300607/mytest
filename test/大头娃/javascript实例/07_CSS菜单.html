@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS制作菜单</title>
+<style type="text/css">
+	#menu{
+		border:1px solid #CCC;
+		width:250px;
+	}
+	#menu ul{
+		list-style:none;
+		margin:0px;
+		padding:0px;
+	}
+	#menu ul li{
+		border-bottom:1px solid #CCC;
+	}
+	/* 如果设置a的高度则先把a转化为块级标记*/
+	#menu ul li a{
+		display:block;
+		text-decoration:none;
+		/*height:30px;
+		line-height:30px;*/
+		padding:10px;
+		background-color:#f6f5ec;
+		border-left:5px solid #999;
+	}
+	#menu ul li a:hover{
+		background-color:#d9d6c3;	
+	}
+</style>
+</head>
+<body>
+   <div id="menu">
+   		<ul>
+        	<li><a href="">首页介绍</a></li>
+            <li><a href="">产品介绍</a></li>
+            <li><a href="">公司信息</a></li>
+            <li><a href="">人才招聘</a></li>
+        </ul>
+   </div>
+   <hr />
+   <!-- 
+   <a href="">aaa</a>
+   <a href="">aaa</a>
+   <span style="height:30px; width:550px; background-color:#CCC; display:block;">span1</span>
+   <span style="height:30px; width:550px; background-color:#CCC;display:block;">span2</span>
+   <div style="height:50px; width:550px; background-color:#CCC; display:inline">div1</div>
+   <div style="height:30px; background-color:#CCC;display:inline">div2</div>
+   -->
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery跨域解决方案</title>
+<script type="text/javascript">
+	// 默认浏览器为了安全问题:禁止了xmlhttprequest 跨域访问
+	// 出现异常: is therefore not allowed access
+	// $.get("http://www.baidu.com");
+	// 思考: <script> <img> <iframe> 等凡是有src属性的标签.默认都可以访问跨域资源
+	function demo(o){
+	    alert(o.name + "," + o.age);	
+	}
+</script>
+<!-- jsonp -->
+<script src="other/temp.js"></script>
+</head>
+
+<body>
+   <ul>
+   		<li>在互联网中我们的计算机是通过ip来定位,但是ip比较难记忆,因此通过domain name 来取代ip就是域名</li>
+        <li>跨域:在A域名中想访问B域名的资源. 常见有两种情况: 1: Webservice 2: 移动端 </li>
+   </ul>
+</body>
+</html>

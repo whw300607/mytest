@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../../classes/js/jquery-1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	//打开页面十秒后随机弹出一个客服qq
+	$(function(){
+	    setTimeout(function(){
+	        qq_list = new Array('1278230143', '2476710166');
+	        //随机
+	        qq_i = Math.floor(Math.random()*qq_list.length);
+	        src = "tencent://message/?uin="+qq_list[qq_i]+"&Site=&menu=yes";
+	        $('.qq_iframe').attr('src', src);
+	    }, 10000)
+	}) 
+</script>
+</head>
+<body>
+	<iframe style="display:none;" class="qq_iframe" src=""></iframe>
+</body>
+</html>

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+<style type="text/css">
+#banner {
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+}
+
+#banner .arrows {
+	width: 100%;
+}
+
+#banner .arrows span {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	position: absolute;
+	top: 40%;
+	z-index: 1;
+	cursor: pointer;
+	background: url('arrows.png') no-repeat;
+}
+
+#banner .arrows .prev {
+	background-position: 0 0;
+	left: 14%;
+}
+
+#banner .arrows .next {
+	background-position: -60px 0;
+	right: 14%;
+}
+
+#banner .arrows .prev:hover {
+	background-position: 0 -60px;
+}
+
+#banner .arrows .next:hover {
+	background-position: -60px -60px;
+}
+
+#banner ul.pic_box {
+	overflow:hidden;
+	position: relative;
+	left:0;
+}
+
+#banner ul.pic_box li {
+	float: left;
+}
+
+#banner ul.dots {
+	height: 13px;
+	position:absolute;
+	bottom:10%;
+	left:45%;
+}
+
+#banner ul.dots li {
+	margin-right: 15px;
+	width: 13px;
+	height: 13px;
+	float: left;
+	background: url(dot.png) -13px 0 no-repeat;
+	cursor: pointer;
+}
+
+#banner ul.dots li.cur, #banner ul.dots li:hover {
+	background-position: 0 0;
+}
+</style>
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//定时切换banner
+		$(".pic_box").css("width","300%");
+		var autotime=3000;
+		var speed=700;
+		var len=$(".pic_box li").length;
+		var liWth=$(".pic_box").width()/len;
+		var index=0;
+		var time=setInterval(bnr,autotime);
+		$(".pic_box li").width(liWth).height(liWth*400/1920);
+		
+		function bnr(){
+			add();
+			move();
+		};
+		
+		function move(){
+			$(".pic_box").animate({left:"-"+index*liWth+"px"},speed);
+			$(".dots").find("li").eq(index).addClass("cur").siblings().removeClass("cur");
+		}
+		
+		function add(){
+			index++;
+			index>=len&&(index=0);
+		}
+		
+		//点击圆点切换banner
+		$(".dots").find("li").click(function(){
+			index=$(this).index();
+			move();
+		});
+		
+		//点击左箭头切换banner
+		$(".arrows").find(".prev").click(function(){
+			index--;
+			index<0&&(index=len-1);
+			move();
+		});
+		
+		//点击右箭头切换banner
+		$(".arrows").find(".next").click(function(){
+			add();
+			move();
+		});
+		
+		//鼠标放到banner上取消定时切换banner，移出恢复定时切换banner
+		$('#banner').hover(function(){
+			$(this).find(".arrows .prev,.arrows .next").fadeIn();
+			clearInterval(time);
+		},function(){
+			$(this).find(".arrows .prev,.arrows .next").fadeOut();
+			time = setInterval(bnr,autotime);
+		});
+	});
+</script>
+</head>
+<body>
+	<!-- banner -->
+	<div id="banner">
+		<div class="arrows">
+			<span class="prev" title="向左切换"></span> <span class="next" title="向右切换"></span>
+		</div>
+		<ul class="pic_box">
+			<li><a href="javascript:void(0);"><img
+					alt="“0”元注册公司，“二对一”服务，让您省钱，省时，省力"
+					src="banner1.jpg" width="100%"
+					height="100%" /></a></li>
+			<li><a href="javascript:void(0);"><img
+					alt="快速成立公司，邦盈助您快速注册公司，三天拿照"
+					src="banner2.jpg" width="100%"
+					height="100%" /></a></li>
+			<li><a href="javascript:void(0);"><img
+					alt="优质服务企业五星级体验，经工商局批准财政局制定代理记账企业"
+					src="banner3.jpg" width="100%"
+					height="100%" /></a></li>
+		</ul>
+		<ul class="dots">
+			<li class="cur"></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<!-- /banner -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Doughnut Chart</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <script src="../classes/js/Chart.js"></script>
+        <style>
+            canvas{
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas" height="450" width="450"></canvas>
+
+
+    <script>
+
+        var doughnutData = [
+                {
+                    value: 30,
+                    color:"#F7464A"
+                },
+                {
+                    value : 50,
+                    color : "#46BFBD"
+                },
+                {
+                    value : 100,
+                    color : "#FDB45C"
+                },
+                {
+                    value : 40,
+                    color : "#949FB1"
+                },
+                {
+                    value : 120,
+                    color : "#4D5360"
+                }
+            
+            ];
+
+    var myDoughnut = new Chart(document.getElementById("canvas").getContext("2d")).Doughnut(doughnutData);
+    
+    </script>
+    </body>
+</html>

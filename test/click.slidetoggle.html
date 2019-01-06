@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/global.css"/>
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<style type="text/css">
+		.wrap .item{padding:20px 0;border-bottom:1px solid #000;}
+		.wrap .item .item-top{height:50px;line-height:50px;cursor:pointer;}
+		.wrap .item .item-top .top-left{}
+		.wrap .item .item-top .item-right{width:20px;height:20px;margin-top:20px;background:url(version.png) no-repeat;}
+		.wrap .item .item-top .close{background-position: 0px -28px;}
+		.wrap .item .item-top .open{background-position: 0px 0px;}
+		.wrap .item .item-bottom{margin-top:20px;width:1000px;}
+		.wrap .item .none{display:none;}
+	</style>
+	<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			//法一
+			/* $(".item-top").click(function(){
+				$(this).next(".item-bottom").slideToggle(700);
+				if($(this).attr("now")=="true"){
+					$(this).find(".item-right").removeClass("close").addClass("open");
+					$(this).attr("now","");
+					$(this).parent().find(".item-bottom").removeClass("none");
+				}
+				else{
+					$(this).find(".item-right").removeClass("open").addClass("close");
+					$(this).attr("now","true");
+					$(this).parent().find(".item-bottom").addClass("none");
+				}
+			}); */
+			
+			//法二
+			$(".item .item-top").click(function(){
+				if($(this).siblings(".item-bottom").css("display")=="none"){
+					$(this).find(".item-right").removeClass("close").addClass("open");
+				}
+				else{
+					$(this).find(".item-right").removeClass("open").addClass("close");
+				}
+				$(this).siblings(".item-bottom").slideToggle();
+			});
+		});
+	</script>
+</head>
+<body>
+	
+	<div class="m wrap">
+		<div class="item1 item">
+			<div class="item-top" now="">
+				<span class="item-left fl">稳赢型项目</span>
+				<div class="item-right fr open"></div>
+			</div>
+			<div class="item-bottom">
+				一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一
+				一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一
+				一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一
+				一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一一
+			</div>
+		</div>
+		<div class="item2 item">
+			<div class="item-top" now="true">
+				<span class="item-left fl">激进型项目</span>
+				<div class="item-right fr close"></div>
+			</div>
+			<div class="none item-bottom">
+				二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二
+				二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二
+				二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二
+				二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二二
+			</div>
+		</div>
+		<div class="item3 item">
+			<div class="item-top" now="true">
+				<span class="item-left fl">保本型项目</span>
+				<div class="item-right fr close"></div>
+			</div>
+			<div class="none item-bottom">
+				三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三
+				三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三
+				三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三
+				三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三三
+			</div>
+		</div>
+	</div>
+</body>
+</html>

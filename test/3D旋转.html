@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<style type="text/css">
+/* hover版本 */
+#outer {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	perspective: 300px;
+	margin: 100px auto;
+}
+
+#front, #back {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	backface-visibility: hidden;
+	transition: transform 0.5s linear;
+}
+
+#front {
+	background-color: blue;
+}
+
+#back {
+	background-color: yellow;
+	transform: rotateY(180deg);
+}
+
+#outer:hover #front {
+	transform: rotateY(-180deg);
+}
+
+#outer:hover #back {
+	transform: rotateY(0deg);
+}
+
+/* 无限循环版本 */
+/* #outer {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	perspective: 300px;
+	margin: 100px auto;
+}
+
+#front, #back {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	backface-visibility: hidden;
+	transition: transform 4s linear;
+}
+
+#front {
+	background-color: blue;
+}
+
+#outer:hover #front {
+	-webkit-animation: rotateFront 12s linear infinite;
+	-o-animation: rotateFront 12s linear infinite;
+	animation: rotateFront 12s linear infinite;
+}
+
+#back {
+	background-color: yellow;
+	transform: rotateY(180deg);
+}
+
+#outer:hover #back {
+	-webkit-animation: rotateBack 12s linear infinite;
+	-o-animation: rotateBack 12s linear infinite;
+	animation: rotateBack 12s linear infinite;
+}
+
+@
+keyframes rotateFront { 0%{
+	transform: rotateY(0deg);
+}
+
+100%{
+transform
+:
+ 
+rotateY
+(-360deg);
+
+            
+}
+}
+@
+keyframes rotateBack { 0%{
+	transform: rotateY(180deg);
+}
+100%{
+transform
+:
+ 
+rotateY
+(-180deg);
+
+            
+}
+} */
+</style>
+</head>
+<body>
+	<div id="outer">
+		<div id="front">front</div>
+		<div id="back">back</div>
+	</div>
+</body>
+</html>

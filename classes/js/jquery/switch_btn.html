@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>切换卡</title>
+<style type="text/css">
+	.switch{width:280px;height:220px;background-color:#fff;}
+	.switch .choosed{line-height:40px;border-bottom:1px solid #ececec;padding-top:5px;padding-left:15px;}
+	.switch .choosed ul{height:40px;}
+	.switch .choosed ul li{float:left;width:100px;text-align:center;font-size:16px;cursor:pointer;height:40px;}
+	.switch .choosed .select{border-bottom:2px solid #00a2e3;color:#00a2e3;}
+	.revieds{padding:10px 0 0 15px;}
+	.revieds .box{float:left;overflow:hidden;width:265px;}
+	.revieds .box ol li{padding:5px;list-style: inside;}
+	.revieds .box ol li a{font-size:14px;}
+	.revieds li:hover{color:#00a2e3;}
+	.revieds a:hover{color:#00a2e3;text-decoration:underline;}
+	.revieds .hide{display:none;}
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".switch ul").find("li").click(function(){
+			$(this).addClass("select").siblings().removeClass("select");
+			$("#switch-box").find(".box").eq($(this).index()).removeClass("hide").siblings().addClass("hide");
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="switch">
+		<div class="choosed">
+			<ul>
+				<li class="select">推荐阅读</li>
+				<li>热门观点</li>
+			</ul>
+		</div>	
+		<div id="switch-box" class="revieds">
+			<div class="box">
+				<ol>
+					<li><a href="javascript:;">收评：创业板权重股强势托底</a></li>
+					<li><a href="javascript:;">三大方向值得重视</a></li>
+					<li><a href="javascript:;">回调就是机会</a></li>
+					<li><a href="javascript:;">收评：券商强拉大盘站上2900点</a></li>
+					<li><a href="javascript:;">挖掘新热点龙头</a></li>
+				</ol>
+			</div>
+			<div class="box hide">
+				<ol>
+					<li><a href="javascript:;">三大方向值得重视</a></li>
+					<li><a href="javascript:;">回调就是机会</a></li>
+					<li><a href="javascript:;">收评：创业板权重股强势托底</a></li>
+					<li><a href="javascript:;">挖掘新热点龙头</a></li>
+					<li><a href="javascript:;">收评：券商强拉大盘站上2900点</a></li>
+				</ol>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

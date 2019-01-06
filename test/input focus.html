@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link type="text/css" href="css/common.css" rel="stylesheet" />
+<link type="text/css" href="css/global.css" rel="stylesheet" />
+<style type="text/css">
+.login-input {
+	position: relative;
+	width: 295px;
+	margin: 10px auto;
+	overflow: hidden;
+	clear: both;
+}
+.login-input .input {
+    width: 258px;
+    height: 28px;
+    padding-left: 30px;
+}
+input[type="text"], input[type="password"] {
+    padding: 5px;
+    line-height: 25px;
+    border: 1px #ddd solid;
+    font-size: 16px;
+}
+.login-input .account, .login-input .password {
+	position: absolute;
+	top: 13px;
+	left: 10px;
+	width: 15px;
+	height: 15px;
+	background: url(sprite.png) no-repeat;
+}
+
+.login-input .account {
+	background-position: -330px -13px;
+}
+.login-input input[name="username"]:focus +.account{
+	background: url(sprite.png) -331px -38px no-repeat;
+}
+.login-input .password {
+	height: 16px;
+	background-position: -300px -12px;
+}
+.login-input input[name="password"]:focus+.password{
+	background: url(sprite.png) -300px -38px no-repeat;
+}
+</style>
+</head>
+<body>
+	<div class="m">
+		<div class="login-input">
+			<input name="username" class="input" placeholder="邮箱/手机号/用户名"
+				maxlength="100" type="text">
+			<div class="account"></div>
+		</div>
+		<div class="login-input">
+			<input name="password" class="input" placeholder="请输入密码"
+				maxlength="100" type="password">
+			<div class="password"></div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+

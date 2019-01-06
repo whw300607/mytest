@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link type="text/css" href="css/common.css" rel="stylesheet" />
+<link type="text/css" href="css/global.css" rel="stylesheet" />
+<style type="text/css">
+.item{
+	width:100px;
+	height:100px;
+} 
+.up {
+	background-color:red;
+}
+
+.center {
+	background-color:blue;
+	margin-left:200px;
+}
+
+.down {
+	background-color:yellow;
+}
+.one{
+	background-color:red;
+}
+
+.two{
+	background-color:orange;
+}
+
+.three{
+	background-color:blue;
+}
+
+.four{
+	background-color:green;
+}
+</style>
+</head>
+<body>
+	<div class="m clearfix">
+		<div class="item up fl">111</div>
+		<div class="item center">222</div>
+		<div class="item down fr">333</div>
+	</div>
+	<div class="m">
+		<div class="item one">111</div>
+		<div class="middle clearfix">
+			<div class="item three fl">333</div>
+			<div class="item two fr">222</div>
+		</div>	
+		<div class="item four">444</div>
+	</div>
+</body>
+</html>

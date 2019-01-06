@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css" />
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+<script type="text/javascript" src="../../classes/js/jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript"src="../../classes/js/jquery.mousewheel.min.js" ></script>
+<style type="text/css">
+	.wrapper .item{height:943px;text-align:center;line-height:943px;font-size:50px;}
+	.wrapper .item1{background:red}
+	.wrapper .item2{background:yellow}
+	.wrapper .item3{background:blue}
+	.wrapper .item4{background:green}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//得到鼠标滚轮的事件处理
+		var nowPage = 0;
+		$(document).mousewheel(function(event,delta){
+			//问题？
+			//鼠标向上滚delta=1，是数值增大的过程，而用户的习惯是序号减小的过程
+			//鼠标向下滚delta=-1，是数值减小的过程，而用户的习惯是序号增大的过程
+			//解决：相反数
+			nowPage = nowPage - delta;
+			if(nowPage<0){
+				nowPage=0;
+			}
+			else if(nowPage>3){
+				nowPage=3;
+			}		
+			$('html,body').animate({scrollTop:$('.item').eq(nowPage).offset().top},500);
+		});
+		/*注册事件*/
+    	if (document.addEventListener) {
+    		document.addEventListener('DOMMouseScroll', scrollFunc, false);
+    	}
+    	//W3C
+    	window.onmousewheel = document.onmousewheel = scrollFunc;	//IE/Opera/Chrome/Safari
+	});
+</script>
+</head>
+<body>
+	<h1></h1>
+	<div class="wrapper">
+		<div class="item item1">1</div>
+		<div class="item item2">2</div>
+		<div class="item item3">3</div>
+		<div class="item item4">4</div>
+	</div>
+</body>
+</html>

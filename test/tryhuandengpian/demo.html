@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>我的幻灯片</title>
+    <link href="index.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="wrap">
+            <img src="images/g.png" class="l_arrw" />
+            <img src="images/f.png" class="r_arrw" />
+            <div id="imgcon" class="clear">
+                <div id="scrollimg">
+                    <dl>
+                        <dt><img src="images/a.jpg" /></dt>
+                        <dd>
+                            <p><a href="javascript:">新款韩版修身小清新送女友猴赛雷小短裙</a></p>
+                            <span>抢购价：56566元</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/b.jpg" /></dt>
+                        <dd>
+                            <p><a href="javascript:">新款韩版修身小清新送女友猴赛雷小短裙</a></p>
+                            <span>抢购价：56566元</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/d.jpg" /></dt>
+                        <dd>
+                            <p><a href="javascript:">新款韩版修身小清新送女友猴赛雷小短裙</a></p>
+                            <span>抢购价：56566元</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/a.jpg" /></dt>
+                        <dd>
+                            <p><a href="javascript:">新款韩版修身小清新送女友猴赛雷小短裙</a></p>
+                            <span>抢购价：56566元</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/b.jpg" /></dt>
+                        <dd>
+                            <p><a href="javascript:">新款韩版修身小清新送女友猴赛雷小短裙</a></p>
+                            <span>抢购价：56566元</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/d.jpg" /></dt>
+                        <dd>
+                            <p><a href="javascript:">新款韩版修身小清新送女友猴赛雷小短裙</a></p>
+                            <span>抢购价：56566元</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/a.jpg" /></dt>
+                        <dd>
+                            <p><a href="javascript:">新款韩版修身小清新送女友猴赛雷小短裙</a></p>
+                            <span>抢购价：56566元</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/b.jpg" /></dt>
+                        <dd>
+                            <p><a href="javascript:">新款韩版修身小清新送女友猴赛雷小短裙</a></p>
+                            <span>抢购价：56566元</span>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="images/d.jpg" /></dt>
+                        <dd>
+                            <p><a href="javascript:">新款韩版修身小清新送女友猴赛雷小短裙</a></p>
+                            <span>抢购价：56566元</span>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="../../classes/js/jquery-2.1.4/jquery.js"></script>
+        <script type="text/javascript">
+            var clicks=0;
+            var len=$("#scrollimg dl").length;//获取dl个数
+            var qk=len/3;//区块的个数
+            //左侧按钮切换方式
+            $("#wrap .l_arrw").click(function(){
+                clicks++;
+                if(clicks<=qk-1){
+                    $("#scrollimg").animate({left:"-"+clicks*480+"px"},500)
+                }
+                else{
+                    alert("木有更多了");
+                    clicks=qk-1;
+                }
+            });
+            //右侧按钮切换方式
+            $("#wrap .r_arrw").click(function(){
+                clicks--;
+                if(clicks>=0){
+                    $("#scrollimg").animate({left:"-"+clicks*480+"px"},500)
+                }
+                else {
+                    alert("木有更多了");
+                    clicks=0;
+                }
+            })
+        </script>
+    </body>
+</html>

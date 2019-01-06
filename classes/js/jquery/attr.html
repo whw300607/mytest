@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			alert("Image width"+$("img").attr("width"));
+		});
+	});
+</script>
+</head>
+<body>
+	<img src="../a.jpg" width="50" height="80" />
+	<br />
+	<button type="button">返回图像的宽度</button>
+</body>
+</html>

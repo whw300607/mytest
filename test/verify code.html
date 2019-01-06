@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.row {
+	width: 100px;
+	float: left;
+	padding: 3px 0px;
+}
+
+.row .col-1 {
+	width: 55%;
+	float: left;
+}
+
+.input-1 {
+	border: 1px solid #e5e5e5;
+	background: #f2f2f2;
+	width: 98%;
+	padding: 8px 0px;
+	padding-left: 5px;
+	border-radius: 5px;
+	color: #979797;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.row .col-2 {
+	width: 35%;
+	margin-left: 10%;
+	float: left;
+	line-height: 29px;
+}
+</style>
+</head>
+<body>
+	<div class="row">
+		<div class="col-1">
+			<input id="txtValidateNum" class="input-1" name="txtValidateNum"
+				type="text">
+		</div>
+		<div class="col-2">
+			<img
+				src="verify.jpg"
+				alt="验证码，看不清楚，请点击刷新验证码" title="看不清楚，请点击刷新验证码" id="img_Validate"
+				onclick="this.src = '/Account/ValidatePic?' + Math.random(); return false;"
+				style="cursor: pointer; vertical-align: bottom;">
+		</div>
+	</div>
+</body>
+</html>

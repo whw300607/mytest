@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+    <title>overflow：hidden</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="#" />
+    <style>
+        input[type="radio"] {
+            margin: 3px 3px 0px 5px;
+            opacity: 0;
+        }
+        label {
+            padding-left: 20px;
+            cursor: pointer;
+            background: url(form-sprite.png) no-repeat 0 0;
+        }
+        label.checked {
+            background-position: 0 -26px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <input type="radio" id="nba" checked="checked" name="sport" value="nba">
+    <label name="nba" class="checked" for="nba">NBA</label>
+    <input type="radio" id="cba" name="sport" value="cba">
+    <label name="cba" for="cba">CBA</label>
+</div>
+</body>
+</html>

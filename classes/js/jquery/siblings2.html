@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>siblings2</title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("li.third").siblings().css({"color":"blue","font-size":"25px"});
+	});	
+</script>
+</head>
+<body>
+	<ul>
+		<li>list item1</li>
+		<li class="third">list item2</li>
+		<li>list item3</li>
+		<li>list item4</li>
+		<li>list item5</li>
+	</ul>
+</body>
+</html>

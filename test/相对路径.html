@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+	});
+</script>
+</head>
+<body>
+	<div class="m">
+		<!-- 当前文档用../分层级，要引入的文档用文件名分层级 -->
+	
+		假设info.html路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+		假设index.html路径是：c:\Inetpub\wwwroot\sites\index.html 
+		在info.html加入index.html超链接的代码应该这样写：
+		../index.html 
+		
+		假设info.html路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+		假设index.html路径是：c:\Inetpub\wwwroot\index.html  
+		在info.html加入index.html超链接的代码应该这样写：
+		../../index.html
+		
+		
+		
+		假设info.html路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+		假设index.html路径是：c:\Inetpub\wwwroot\sites\wowstory\index.html
+		在info.html加入index.html超链接的代码应该这样写： 
+		../wowstory/index.html
+		
+		假设info.html路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+		假设index.html路径是：c:\Inetpub\wwwroot\sites\blabla\html\index.html
+		在info.html加入index.html超链接的代码应该这样写： 
+		html/index.html
+		
+		假设info.html路径是：c:\Inetpub\wwwroot\sites\blabla\info.html
+		假设index.html路径是：c:\Inetpub\wwwroot\sites\blabla\html\tutorials\index.html
+		在info.html加入index.html超链接的代码应该这样写：
+		html/tutorials/index.html
+	</div>
+</body>
+</html>

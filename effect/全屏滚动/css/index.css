@@ -1,0 +1,365 @@
+@CHARSET "UTF-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
+body {color:#333; font-size:14px; font-family:Microsoft YaHei,Verdana,Arial,elvetica,sans-serif;}
+td,th,caption { font-size:14px; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
+a { color:#333; text-decoration:none;}
+i{font-style:normal;}
+img{ border:none;}
+ol,ul,li { list-style:none; }
+input, textarea, select, button {font-size:14px;border:0 none;}
+table { border-collapse:collapse; }
+html {overflow-y: scroll;}
+h2,h3{margin-left:auto;margin-right:auto;}
+/* css common */
+.clearfix:after{content:"."; display: block; height:0; clear:both; visibility: hidden;}
+.clearfix{*zoom:1;}
+*{margin:0;padding:0;}
+@-webkit-keyframes rotation{
+from {-webkit-transform: rotate(360deg);}
+to {-webkit-transform: rotate(0deg);}
+}
+
+
+@media screen and (min-width:1000px) {
+/* 大屏样式 */
+.customerItem .img-responsive{display:inline-block;}
+.box{position:relative;width:100%;height:100%;overflow:hidden;}
+.bd_b{background-color:#fff;width:130px;height:2px;margin-left:auto;margin-right:auto;margin-top:23px;margin-bottom:147px;position: relative;left: -10px;}	
+.wrapBox{width:100%;height:100%;position:fixed;}
+.page1{position:relative;background-color:#050318;}
+.page1 .botPic{position: absolute;bottom:-12%;z-index: 1;}
+.page1 .centPic{position: absolute;bottom: 47%;left: 42%;z-index: 1;width: 245px;}
+.page1 .circlePic{position: absolute;bottom: -4%;left: 50%;margin-left: -30%;z-index: 1;-webkit-transform: rotate(360deg);animation: rotation 7s linear infinite;-moz-animation: rotation 7s linear infinite;-webkit-animation: rotation 7s linear infinite;-o-animation: rotation 7s linear infinite;}
+.page1 canvas{position:absolute;bottom:-45%;z-index:2;}
+.page2{position:relative;background:url('./../images/introBg.jpg') no-repeat center center;background-size: 100%;}
+.page3{background:url('./../images/serviceBg.jpg') no-repeat center center;}
+.page4{background:url('./../images/customer.jpg') no-repeat center center;}
+.page5{position: relative;}
+.page6{position:relative;}
+.page7{background:purple;}
+.fixedNav{height:60px;width:100%;background:url(./../images/sprite.png) repeat-x;position:fixed;z-index:10;}
+/* 导航按钮 */
+#menu{position: fixed; top: 27%; right: 3%;width: 14px; height: 290px;}
+#menu ul{width: 100%; height: 100%;}
+#menu li{width:100%;height:14px;background-image:url(./../images/gray.png);margin-bottom:30px;cursor:pointer;position:relative;}
+#menu li a{/*display:none;*/position:absolute;right:40px;top:-2px;width:286%;color:#00ffff;font-size:1.125em;}
+#menu li.active{background-image:url('./../images/blue.png');}
+
+
+#fullPage-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+}
+#fullPage-nav.right {
+    right: 60px;
+}
+#fullPage-nav.left {
+    left: 17px;
+}
+.fullPage-slidesNav {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+.fullPage-slidesNav.bottom {
+    bottom: 17px;
+}
+.fullPage-slidesNav.top {
+    top: 17px;
+}
+#fullPage-nav ul,
+.fullPage-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fullPage-nav li,
+.fullPage-slidesNav li {
+    display: block;
+    width: 70px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+    margin-bottom:30px;
+}
+.fullPage-slidesNav li {
+    display: inline-block;
+}
+#fullPage-nav li a,
+.fullPage-slidesNav li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fullPage-nav li .active span,
+.fullPage-slidesNav .active span {
+	background-image:url('./../images/blue.png');
+}
+#fullPage-nav span,
+.fullPage-slidesNav span {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background-image: url(./../images/gray.png);
+    cursor: pointer;
+    position: absolute;
+    border: none;
+    bottom: 0;
+    left: 67px;
+}
+.fullPage-tooltip {
+    position: absolute;
+    color: #fff;
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif;
+    top: -2px;
+}
+.fullPage-tooltip.right {
+    right: 20px;
+}
+.fullPage-tooltip.left {
+    left: 20px;
+}
+
+
+
+/* 点波浪 */
+.page1 .tits{position: absolute;top:23.44%;z-index: 9999;width: 31%;left: 49%;text-align: center;margin-left: -15%;}
+.page1 .egXigo{color: #fff;font-size: 36px;font-weight: 400;margin-bottom: 32px;letter-spacing: 7px;text-indent: -30px;}
+.page1 .egXigo .letterX{color:#00ffff;}
+.page1 .egXigo .letterG{color:#ffde00;}	
+.page1 .egXigo .letterO{margin-right: 55px;}
+.page1 .cnXigo{letter-spacing: 38px;color: #00ffff;font-size: 18px;}
+.page1 .cross{position:absolute;left:71%;top:8%;z-index:999;}
+/* 关于熹果 */
+.aboutSeego{width:1050px;margin-top:6.75%;margin-left:auto;margin-right:auto;text-align:center;background-size:100% 100%;}
+.aboutSeego h2.eglAbout{font-size:26px;color:#fff;margin-bottom:45px;letter-spacing:32px;}
+.aboutSeego h2.eglAbout .lettaA{color:#01d2d3;}
+.aboutSeego h2.eglAbout .lettaU{color:#ffde00;}
+.aboutSeego h2.eglAbout .letterT{margin-right: 35px;}
+.aboutSeego h2.cnAbout{width:213px;margin-left:auto;margin-right:auto;font-size:20px;color:#00ffff;letter-spacing:24px;}
+.aboutSeego .intro{text-indent:32px;font-size:16px;margin-bottom:25px;color:#fff;line-height:35px;text-align:left;}
+.aboutSeego .borderBtm{width:90px;background-color:#ffff00;height:5px;}
+.line{position:absolute;left:18.43%;bottom:0;}
+.line1{position:absolute;right:18.43%;top:0;}
+.aboutSeego .bd_b{margin-bottom:75px;}
+/* 我们的服务 */
+.ourService,.customer,.caseShow,.contactUs{text-align:center;margin-top:7.51%;width:1150px;margin-left:auto;margin-right:auto;}
+.ourService .egTit,.customer .egTit,.caseShow .egTit,.contactUs .egTit{letter-spacing:14px;font-size:26px;color:#fff;margin-bottom:35px;}
+.ourService .cnTit,.customer .cnTit,.caseShow .cnTit,.contactUs .cnTit{letter-spacing:20px;margin-left:auto;margin-right:auto;font-size:20px;color:#00ffff;}
+.ourService .egTit .letterH,.ourService .egTit .letterR,.customer .egTit .letterH,.customer .egTit .letterE,.caseShow .egTit .letterE,.contactUs .egTit .letterT{margin-right: 40px;}
+.ourService{margin-top:6%;}
+.ourService .bd_b{margin-bottom:7.95%;}
+.ourService ul{width:980px;margin-left:auto;margin-right:auto;}
+.ourService ul li{width:245px;float:left;margin-right:115px;}
+.ourService ul li.laseItem{margin-right:-130px;}
+.ourService ul li .topPic{width:242px;height:242px;cursor:pointer;line-height:242px;text-align:center;margin-bottom:9.28%;}
+.ourService ul li .topPic.one{background:url('./../images/systemBg.png') no-repeat;}
+.ourService ul li.on .topPic.one{background:url('./../images/systemHoverBg.png') no-repeat;}	
+.ourService ul li .topPic.two{background:url('./../images/brainBg.png') no-repeat;}
+.ourService ul li.on .topPic.two{background:url('./../images/brainHoverBg.png') no-repeat;}	
+.ourService ul li .topPic.three{background:url('./../images/platBg.png') no-repeat;}
+.ourService ul li.on .topPic.three{background:url('./../images/platHoverBg.png') no-repeat;}	
+.ourService ul li h3{width:85px;margin-top: 39.28%;padding-bottom: 6.08%;font-size:20px;color:#fff;}
+.ourService ul li h3.new{width:155px;}
+.ourService ul li.on h3{border-color:#07d3d5;}
+.ourService ul li .bd_b{background-color: #fff;width: 62px;height: 2px;margin-left: auto;margin-right: auto;margin-top: 23px;margin-bottom: 147px;left: 0;}
+.ourService ul li.on .bd_b{background-color:#00ffff;}
+/* 合作客户 */
+.customer{width:68.75%;height:60.64%;}
+.customer .egTit{width:52%;}          
+.customer .cnTit{width:22.5%;}              
+.customer .swiper-container{width: 103.5%; height: 77.6%;}
+.customer .swiper-container .swiper-wrapper {width:200%;height:74.5%;}  
+.customer .swiper-container .swiper-wrapper .swiper-slide{width:50% !important;height:100%;}            
+.customer .swiper-container .swiper-wrapper .swiper-slide .customerItem{float:left;border-radius:3px;background-color:#fff;width:16.91%;height:100%;text-align:center;line-height:26rem;margin-right:2.94%;}  
+.swiper-pagination-bullet{margin: 0 10px!important;width:12px;height:12px;background:#00ffff;border: 1px solid #00ffff;opacity: .6;}
+.swiper-pagination-bullet-active{background: #00ffff;opacity:1;}
+.swiper-container-horizontal>.swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction{bottom: 0;left:-15px;width: 100%;}
+/* 案例展示 */
+.page5{position:relative;background:url('./../images/caseBg1.jpg') 100% no-repeat;}
+.caseShow{width:100%;height:73.14% ;margin-top:5%;}
+.caseShow .egTit{width:52%;}	
+.caseShow .cnTit{width:22.5%;}	
+.caseShow .caseOne{position:absolute;bottom:33%;left:12%;width:170px;height:194px;text-align:center;}	
+.caseShow .caseOne.caseFour{position:absolute;bottom:39%;left:80%;text-align:center;}	
+.caseShow .caseOne:hover{background:url(./../images/outerBg.png) no-repeat;background-size:100%;}
+.caseShow .caseOne .InnerBg{display:inline-block;margin-top:13px;padding:0 10px;width:145px;height:170px;text-align:center;background-image:url(./../images/innerBg.png);background-size:100%;}	
+.caseShow .caseOne .InnerBg h3{margin-top:60px;margin-bottom:15px;font-size:17px;font-weight:bold;color:#fff;}	
+.caseShow .caseOne .InnerBg p{font-size:12px;color:#fff;line-height:30px;}
+.caseShow .caseTwo{position:absolute;bottom:28%;left:25%;width:255px;height:292px;text-align:center;}	
+.caseShow .caseTwo.caseFive{position:absolute;left:62%;text-align:center;}
+.caseShow .caseTwo:hover{background:url(./../images/outerBg.png) no-repeat;background-size:100%;}
+.caseShow .caseTwo .InnerBg{display:inline-block;margin-top:20px;padding:0 10px;width:215px;height:250px;text-align:center;background-image:url(./../images/innerBg.png);background-size:100%;}	
+.caseShow .caseTwo .InnerBg h3{margin-top:85px;margin-bottom:30px;line-height: 40px;font-size:30px;font-weight:bold;color:#fff;}	
+.caseShow .caseTwo.caseFive .InnerBg h3{margin-bottom: 0;}
+.caseShow .caseTwo .InnerBg p{font-size:12px;color:#fff;line-height:30px;}
+.caseShow .caseThree{position:absolute;bottom: 41%;left: 47%;width:212px;height:243px;text-align:center;}	
+.caseShow .caseThree.caseSix{position:absolute;bottom:4%;left:41%;text-align:center;}
+.caseShow .caseThree:hover{background:url(./../images/outerBg.png) no-repeat;background-size:100%;}
+.caseShow .caseThree .InnerBg{display:inline-block;margin-top:16px;padding:0 10px;width:181px;height:211px;text-align:center;background-image:url(./../images/innerBg.png);background-size:100%;}	
+.caseShow .caseThree .InnerBg h3{margin-top:70px;margin-bottom:25px;font-size:17px;font-weight:bold;color:#fff;}	
+.caseShow .caseThree .InnerBg p{font-size:12px;color:#fff;line-height:30px;}
+/* 联系我们 */
+.contactUs{width:395px;position:absolute;z-index:25;top:23.61%;left:50%;margin-top:0;margin-left:-6.25%;}
+.msgList{position: absolute;z-index: 25;top: 61.125%;left: 53.48%;}	
+.msgList p{text-align:left;color:#fff;font-size:18px;line-height:70px;}	
+.msgList p span{color:#00ffff;}	
+.magnify {float:left;z-index:20;position:relative;width:42.18%;height:100%;margin:0px auto;overflow:hidden;}
+.unmagnify{float:left;z-index:20;position:relative;width:57.82%;height:100%;margin:0px auto;overflow:hidden;}
+.magnify img {display:block;}
+.element_to_magnify{position: absolute;width:100%;height:100%;overflow:hidden;height: 947px!important;}
+.element_to_magnify a{display:block;position:absolute;top:80px;right:80px;background-color:rgba(200,200,200,.25);padding:4px;font-size:18px;color:#fff;}
+.magnify_glass{z-index:300;position:absolute;border:6px solid #fff;border-radius:50%;width:375px;height:375px;overflow:hidden;box-shadow:0 0 30px #ccc inset;-webkit-box-shadow:0 0 30px #ccc inset;-moz-box-shadow:0 0 30px #ccc inset;-o-box-shadow:0 0 30px #ccc inset;}
+.opacityBg{width:100%;height:100%;position: absolute;background: #070716;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;z-index: 17;}
+.goRecruit{position:absolute;right:1.77%;bottom:3.02%;z-index:999;overflow:hidden;cursor:pointer;width:65px;height:65px;line-height:65px;text-align:center;border:2px solid #00ffff;border-radius:2px;}
+.goRecruit span{display:none;color:#00ffff;font-size:18px;margin-left:30px;}
+/* /大屏样式 */
+}
+ @media (min-width:310px) and (max-width: 999px) {
+/* 小屏 */ 	
+.box{overflow: hidden;width:100%;height:100%;}
+.wrapBox{width:100%;height:100%;position:relative;}
+.page1{position:relative;background-color:#050318;}
+.page2{position:relative;background:url('./../images/introBg.jpg') no-repeat center center;}
+.page3{background:url('./../images/serviceBg.jpg') no-repeat center center;}
+.page4{background:url('./../images/customer.jpg') no-repeat center center;}
+.page5{background:purple;}
+.page6{position:relative;background:url(./../images/pageactUs.png) no-repeat center center;}
+.page7{background:purple;}
+.nav{display:none;}
+.customerItem .img-responsive{display:inline-block;}
+.page{position:relative;overflow:hidden;}
+.bd_b{background-color:#fff;width:56px;height:2px;margin-left:auto;margin-right:auto;margin-top:23px;margin-bottom:28px;} 	
+.fixedNav{height:60px;width:100%;background:url(./../images/sprite.png) repeat-x;position:fixed;z-index:10;}
+/* 点波浪 */
+.page1 .botPic{position:absolute;bottom:36%;z-index:1;}
+.page1 .centPic{position: absolute;bottom: 54%;z-index: 1;width: 16%;left: 50%;margin-left: -8%;}
+.page1 .circlePic{position:absolute;bottom:29%;z-index:1;   -webkit-transform: rotate(360deg);
+    animation: rotation 7s linear infinite;
+    -moz-animation: rotation 7s linear infinite;
+    -webkit-animation: rotation 7s linear infinite;
+    -o-animation: rotation 7s linear infinite;}
+.page1 canvas{position:absolute;bottom:-25%;z-index:2;}
+.page1 .tits{position: absolute;top: 25.44%;z-index: 9999;width: 72%;left: 50%;text-align: center;margin-left: -34%;}
+.page1 .egXigo{color: #fff;font-size: 20px;font-weight: 400;margin-bottom: 15px;letter-spacing: 4px;}
+.page1 .egXigo .letterX{color:#00ffff;}
+.page1 .egXigo .letterG{color:#ffde00;}	
+.page1 .egXigo .letterO{margin-right: 25px;}
+.page1 .cnXigo{letter-spacing: 18px;color: #00ffff;font-size: 16px;}
+.page1 .cross{position:absolute;left:71%;top:8%;z-index:999;width: 10%;}
+/* 导航按钮 */
+.nav{position: fixed;top: 27%;right: 3%;width: 10px;height: 332px;}
+.nav ul{width: 100%; height: 100%;}
+.nav li{width:100%;height:10px;background-image:url(./../images/gray.png);background-size: 100%;margin-bottom:15px;cursor:pointer;position:relative;}
+.nav li span{position:absolute;right:10px;top:-3px;width:3rem;color:#00ffff;font-size:12px;}
+.nav li.current{background-image:url('./../images/blue.png');}
+/* 关于熹果 */
+.aboutSeego{width:80%;margin-top:54px;margin-left:auto;margin-right:auto;text-align:center;background-size:100% 100%;}
+.aboutSeego h2.eglAbout{font-size: 21px;color: #fff;margin-bottom: 16px;letter-spacing: 10px;}
+.aboutSeego h2.eglAbout .lettaA{color:#01d2d3;}
+.aboutSeego h2.eglAbout .lettaU{color:#ffde00;}
+.aboutSeego h2.eglAbout .letterT{margin-right: 10px;}
+.aboutSeego h2.cnAbout{width: 150px;margin-left: auto;margin-right: auto;font-size: 16px;color: #00ffff;letter-spacing: 10px;}
+.aboutSeego .intro{font-size:12px;text-indent:24px;margin-bottom:5px;color:#fff;line-height:27px;text-align:left;}
+.aboutSeego .borderBtm{width: 59px;background-color: #ffff00;height: 3px;}
+.line {position: absolute;left: 6.43%;bottom: 0;width: 90px;height: 98px;}
+.line1{position:absolute;right:8.43%;top:0;width: 90px;height: 98px;}
+.aboutSeego .bd_b{margin-bottom: 80px;}
+/* 我们的服务 */
+.ourService,.customer{text-align:center;margin-top:130px;width:96%;margin-left:auto;margin-right:auto;}
+.ourService{height:87.65%;}
+.ourService .egTit,.customer .egTit,.caseShow .egTit,.contactUs .egTit{letter-spacing: 4px;font-size: 20px;color: #fff;margin-bottom: 16px;}
+.ourService .cnTit,.customer .cnTit,.caseShow .cnTit,.contactUs .cnTit{letter-spacing: 7px;margin-left: auto;margin-right: auto;font-size: 16px;color: #00ffff;} 	
+.ourService .egTit .letterH,.ourService .egTit .letterR,.customer .egTit .letterH,.customer .egTit .letterE,.caseShow .egTit .letterE,.contactUs .egTit .letterT{margin-right: 15px;}
+.ourService .bd_b{margin-bottom: 100px;}
+.ourService ul{width:100%;margin-left:auto;margin-right:auto;overflow:hidden;}
+.ourService ul li{width:105px;float:left;margin-right:20px;}
+.ourService ul li.laseItem{margin-right:-130px;}
+.ourService ul li .topPic{width: 105px;height: 105px;line-height: 242px;text-align: center;background: 100% 100%;margin-bottom: 35px;background-size: 100%;}
+.ourService ul li .topPic.one{background-image:url('./../images/systemBg.png');}
+.ourService ul li.on .topPic.one{background-image:url('./../images/systemHoverBg.png');}	
+.ourService ul li .topPic.two{background-image:url('./../images/brainBg.png');}
+.ourService ul li.on .topPic.two{background-image:url('./../images/brainHoverBg.png') ;}	
+.ourService ul li .topPic.three{background-image:url('./../images/platBg.png');}
+.ourService ul li.on .topPic.three{background-image:url('./../images/platHoverBg.png')}	
+.ourService ul li h3{width:85px;margin-bottom:35px;padding-bottom:10px;font-size:12px;color:#fff;}
+.ourService ul li h3.new{width:96px;}
+.ourService ul li h3.on{border-color:#07d3d5;}
+.ourService ul li p{width:130px;margin-left:auto;margin-right:auto;color:#fff;line-height:25px;}
+/* 合作客户 */
+.customer{width:100%;height:100%;}
+.customer .egTit{width:90%;}          
+.customer .cnTit{width:28%;}              
+.customer .swiper-container{width:94%; height:48.6%;}
+.customer .swiper-container .swiper-wrapper {width:200%;height:112.5%;}  
+.customer .swiper-container .swiper-wrapper .swiper-slide{width:51%!important;height:100%;}            
+.customer .swiper-container .swiper-wrapper .swiper-slide .customerItem{float: left;background-color: #fff;width: 18%;height: 37%;text-align: center;line-height: 11rem;margin-right: 5px;}
+.swiper-pagination-bullet{width:12px;height:12px;background: #86c7dd;border: 1px solid #00ffff;opacity:.6;}
+.swiper-pagination-bullet-active{background: #00ffff;opacity:1;}
+.swiper-container-horizontal>.swiper-pagination-bullets{bottom:110px;}
+.customer .bd_b{margin-bottom: 120px;}
+/* 案例展示 */
+.page5{position:relative;background:url('./../images/caseBg1.jpg') 100% no-repeat;}
+.caseShow{width:100%;height:73.14% ;margin-top:5%;}
+.caseShow .egTit{width:63%;}	
+.caseShow .cnTit{width:26.5%;}	
+.caseShow .caseOne{position:absolute;bottom:50%;left:12%;width:170px;height:194px;text-align:center;}	
+.caseShow .caseOne.caseFour{position:absolute;bottom:1%;left:39%;text-align:center;}	
+.caseShow .caseOne:hover{background:url(./../images/outerBg.png) no-repeat;background-size:100%;}
+.caseShow .caseOne .InnerBg{display:inline-block;margin-top:13px;padding:0 10px;width:115px;height:132px;text-align:center;background-image:url(./../images/innerBg.png);background-size:100%;}	
+.caseShow .caseOne .InnerBg h3{margin-top: 40px;margin-bottom: 15px;font-size: 15px;font-weight: bold;color: #fff;}	
+.caseShow .caseOne .InnerBg p{font-size:12px;color:#fff;line-height:20px;}
+.caseShow .caseTwo{position:absolute;bottom:15%;left:-7%;width:255px;height:292px;text-align:center;}	
+.caseShow .caseTwo.caseFive{position:absolute;left:40%;text-align:center;}
+.caseShow .caseTwo:hover{background:url(./../images/outerBg.png) no-repeat;background-size:100%;}
+.caseShow .caseTwo .InnerBg{display:inline-block;margin-top:20px;padding:0 10px;width:164px;height:191px;text-align:center;background-image:url(./../images/innerBg.png);background-size:100%;}	
+.caseShow .caseTwo .InnerBg h3{margin-top:45px;margin-bottom:0;line-height: 40px;font-size:23px;font-weight:bold;color:#fff;}	
+.caseShow .caseTwo.caseFive .InnerBg h3{margin-bottom: 0;}
+.caseShow .caseTwo .InnerBg p{font-size:12px;color:#fff;line-height:30px;}
+.caseShow .caseThree{position:absolute;bottom: 49%;left: 47%;width:212px;height:243px;text-align:center;}	
+.caseShow .caseThree.caseSix{position:absolute;bottom:-10%;left:-4%;text-align:center;}
+.caseShow .caseThree:hover{background:url(./../images/outerBg.png) no-repeat;background-size:100%;}
+.caseShow .caseThree .InnerBg{display:inline-block;margin-top:16px;padding:0 10px;width:129px;height:150px;text-align:center;background-image:url(./../images/innerBg.png);background-size:100%;}	
+.caseShow .caseThree .InnerBg h3{margin-top:40px;margin-bottom:10px;font-size:17px;font-weight:bold;color:#fff;}	
+.caseShow .caseThree .InnerBg p{font-size:12px;color:#fff;line-height:21px;}
+/* 联系我们 */
+.contactUs{width:49%;position:absolute;z-index:25;top:23.61%;left:50%;text-align: center;margin-top:0;margin-left:-23.25%;}
+.msgList{position: absolute;z-index: 25;top: 61.125%;left: 53.48%;}	
+.msgList p{text-align:left;color:#fff;font-size:12px;line-height:33px;}	
+.msgList p span{color:#00ffff;}	
+.magnify {float:left;z-index:20;position:relative;width:42.18%;height:100%;margin:0px auto;overflow:hidden;}
+.unmagnify{float:left;z-index:20;position:relative;width:57.82%;height:100%;margin:0px auto;overflow:hidden;}
+.magnify img {display:block;}
+.element_to_magnify {position: absolute;width:100%;height:100%;overflow:hidden;height: 947px!important;}
+.element_to_magnify a {display:block;position:absolute;top:80px;right:80px;background-color:rgba(200,200,200,.25);padding:4px;font-size:18px;color:#fff;}
+.magnify_glass {z-index:300;position:absolute;border:3px solid #fff;border-radius:50%;width:75px;height:75px;overflow:hidden;box-shadow:0 0 30px #ccc inset;-webkit-box-shadow:0 0 30px #ccc inset;-moz-box-shadow:0 0 30px #ccc inset;-o-box-shadow:0 0 30px #ccc inset;}
+.opacityBg{width:100%;height:100%;position: absolute;background: #070716;filter:alpha(opacity=80);-moz-opacity:0.8;-khtml-opacity: 0.8;opacity: 0.8;z-index: 17;}
+.goRecruit{position:absolute;right:1.77%;bottom:3.02%;z-index:999;overflow:hidden;cursor:pointer;width:65px;height:65px;line-height:65px;text-align:center;border:2px solid #00ffff;border-radius:2px;}
+.goRecruit span{display:none;color:#00ffff;font-size:18px;margin-left:30px;}
+/* 小屏 */ 	
+}
+@keyframes play{
+	from{
+		opacity:0.3;
+	}
+	to{
+		opacity:1;
+	}
+}
+@-webkit-keyframes play{
+	from{
+		opacity:0.3;
+	}
+	to{
+		opacity:1;
+	}
+}

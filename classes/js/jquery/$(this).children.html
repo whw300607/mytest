@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(function(){
+		    $("#test").click(function() {    // 单击div元素
+		        $(this).children('a').css('color','red');    // 使用children('li')获取div下的li元素，然后设置颜色为red即红色
+		    });
+		}); 
+	});
+</script>
+</head>
+<body>
+	<div id="test">
+	    <span>我是span标签</span><br>
+	    <li>我是li标签</li>
+	    <a href="#">我是超链接a标签</a>
+	</div>
+</body>
+</html>

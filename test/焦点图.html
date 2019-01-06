@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link type="text/css" href="css/common.css" rel="stylesheet" />
+<link type="text/css" href="css/global.css" rel="stylesheet" />
+<style type="text/css">
+	.banner{position:relative;margin-top:50px;}
+	.banner ul.banner-img{width:9999em;height:300px;overflow:hidden}
+	.banner ul.banner-img li{float:left}
+	.banner ul.banner-img li img{width:1000px;height:300px}
+	.banner ul.banner-radius{position:absolute;top:250px;left:390px;width:150px}
+	.banner ul.banner-radius li{float:left;width:10px;height:10px;margin-right:10px;cursor:pointer;border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;background-color:#ccc}
+	.banner ul.banner-radius li:hover,
+	.banner ul.banner-radius li.on{background-color:#31ace2}
+	.banner .img {position: absolute;top: 135px;text-shadow: 0 1px 2px rgba(0, 0, 0, .6);}
+	.banner .zuo {left: 10px;}
+	.banner .you{right: 10px;z-index: 1;}
+</style>
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//主业轮播图
+		var index=0;
+		var imgStart;
+		var len=$(".banner-radius li").length;
+		$(".banner").hover(function(){
+			clearInterval(imgStart);
+		},function(){
+			imgStart=setInterval(function(){
+				show();
+				index++;
+			},1500);
+		}).trigger("mouseout");
+		
+		$(".banner-radius li").mouseover(function(){
+			//获取鼠标放上的当前所引值
+			index=$(this).index();
+			show();
+		});
+		$(".banner").hover(function(){
+			$(".banner").find(".img").fadeToggle(1000);
+		});
+		$(".you").on("click",function(){
+			index++;
+			if(index==len){
+				index=0;
+			}
+			show();
+		});
+		$(".zuo").on("click",function(){
+			if(index==0){
+				index=len;
+			}
+			index--;
+			show();
+		});
+		function show(){
+			//获取到每次滚动的距离（就是大div的高度）
+			var adWidth=$(".banner").width();
+			//判断当图片滚到最后一张时再从新拉回来从新开始
+			if(index==len){
+				index=0;
+			}
+			//图片向上滚动改变他的stop值来定位
+			$(".banner-img").stop(true).animate({
+				marginLeft:-adWidth*index
+				
+			},1000);
+			//给数字添加on其他的兄弟节点去除on
+			$(".banner-radius li").removeClass("on").eq(index).addClass("on");
+		} 
+	});
+
+
+
+
+
+
+		/*股神榜  切换*/
+		$(".bgRights .box .daOne").each(function(){
+			$(this).on("mouseover",function(){
+				var index=$(this).index();
+				$(".bgLefts").find(".box").eq(index).removeClass("hide").siblings().addClass("hide");
+			})
+		});
+
+		/*$(".bgRights").find(".daOne").on("mouseover",function(){
+			$(".bgLefts").css("display","block");
+		}).on("mouseout",function(){
+			$(".bgLefts").css("display","none");
+		});
+		*/
+
+		/* 点击空白详情弹框消失 */
+		$(document).click(function(event){
+			var zone = $(".box");   // 设置目标区域
+			if(!zone.is(event.target) && zone.has(event.target).length === 0){   //判断点击事件是否发生在目标区域外
+				$(".bgLefts").find(".box").addClass("hide");
+				}
+			});
+
+		/* 点击单箭头右移一个栏目 */
+		var clicks_one=0;
+		var clicks_all=0;
+		var len=$(".bgRights .data li").length;//获取li个数
+	    var qk=(len-2)/8;//区块的个数
+		$(".switch_arrw .right_switch_one").click(function(){
+			clicks_one++;
+			if(clicks_one<=25){
+	    		$(".bgRights li").animate({left:"-"+(clicks_one*97+clicks_all*776)+"px"},1000)
+	        }
+	        else{
+	            alert("没有更多了");
+	            $(".bgRights li").animate({left:"-"+2328+"px"},200);
+
+	        }
+		});
+
+		 /* 点击双箭头右移全部栏目 */
+		$(".switch_arrw .right_switch_all").click(function(){
+			clicks_all++;
+			if(clicks_all<=3){
+	    		$(".bgRights li").animate({left:"-"+(clicks_one*97+clicks_all*776)+"px"},1000)
+	        }
+	        else{
+	            alert("没有更多了");
+	            $(".bgRights li").animate({left:"-"+2328+"px"},1000);
+
+	        }
+		});
+
+
+
+
+
+
+
+
+		/* 点击单箭头左移一个栏目  */
+		$(".switch_arrw .left_switch_one").click(function(){
+			clicks_one--;
+			if(clicks_one>=0){
+	    		$(".bgRights li").animate({left:"-"+(clicks_one*97+clicks_all*776)+"px"},1000)
+	        }
+	        else{
+	            alert("没有更多了");
+	            $(".bgRights li").animate({left:"-"+0+"px"},1000);
+	            clicks_one=0;
+	            clicks_all=0;
+	            alert(clicks_one);
+	            alert(clicks_all);
+	        }
+		});
+
+		 /* 点击双箭头左移全部栏目 */
+		$(".switch_arrw .left_switch_all").click(function(){
+			clicks_all--;
+			if(clicks_all>=0){
+	    		$(".bgRights li").animate({left:"-"+(clicks_one*97+clicks_all*776)+"px"},1000)
+	        }
+			else{
+	            alert("没有更多了");
+	            $(".bgRights li").animate({left:"-"+0+"px"},1000);
+	            clicks_one=0;
+	            clicks_all=0;
+	            alert(clicks_one);
+	            alert(clicks_all);
+	        }
+		});
+</script>
+</head>
+<body>
+	<div class="m banner">
+		<ul class="banner-img">
+			<li><img src="banner1.jpg" /></li>
+			<li><img src="banner2.jpg" /></li>
+			<li><img src="banner3.jpg" /></li>
+			<li><img src="banner4.jpg" /></li>
+			<li><img src="banner5.jpg" /></li>
+			<li><img src="banner6.jpg" /></li>
+		</ul>
+		<ul class="banner-radius">
+			<li></li>
+			<li class="on"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<div class="img zuo" style="display: none;">
+			<img src="left.ico">
+		</div>
+		<div class="img you" style="display: none;">
+			<img src="right.ico">
+		</div>		
+	</div>
+</body>
+</html>

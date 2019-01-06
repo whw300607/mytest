@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>Line Chart</title>
+<script src="../classes/js/Chart.js"></script>
+<meta name="viewport" content="initial-scale = 1, user-scalable = no">
+<style>
+canvas {
+	
+}
+</style>
+</head>
+<body>
+	<canvas id="month-canvas" height="600" width="1000"></canvas>
+	<script>
+        var lineChartData = {
+　　　　　　　// x轴的标示
+            labels : ["2016-01-01","2016-01-02","2016-01-03","2016-01-04","2016-01-05","2016-01-06","2016-01-07","2016-01-08","2016-01-09","2016-01-10","2016-01-11","2016-01-12","2016-01-13","2016-01-14","2016-01-15","2016-01-16","2016-01-17","2016-01-18","2016-01-19","2016-01-20","2016-01-21","2016-01-22","2016-01-23","2016-01-24","2016-01-25","2016-01-26","2016-01-27","2016-01-28","2016-01-29","2016-01-30","2016-01-31"],
+　　　　　　　// 数据，数组中的每一个object代表一条线
+            datasets : [
+                {
+　　　　　　　　　　　　// 颜色的使用类似于CSS，你也可以使用RGB、HEX或者HSL
+　　　　　　　　　　　　// rgba颜色中最后一个值代表透明度
+　　　　　　　　　　　　// 填充颜色
+                fillColor : "rgba(220,220,220,0.5)", 
+　　　　　　　　　　　　// 线的颜色
+                strokeColor : "red",
+　　　　　　　　　　　　// 点的填充颜色
+                pointColor : "orange",
+　　　　　　　　　　　　// 点的边线颜色
+                pointStrokeColor : "yellow", 
+　　　　　　　　　　　　// 与x轴标示对应的数据
+                data : [12,59,50,50,56,55,40,59,50,50,56,55,40,59,50,50,56,55,40,59,50,50,56,55,40,59,50,50,77,55,40]
+                },
+               {
+                    fillColor : "rgba(220,220,220,0.5)",
+                    strokeColor : "rgba(151,187,205,1)",
+                    pointColor : "rgba(151,187,205,1)",
+                    pointStrokeColor : "#fff",
+                    data : [28,48,40,19,12,27,50,48,40,19,12,27,50,48,40,19,12,27,50,48,40,19,12,27,50,48,40,19,12,27,50]
+                }, 
+               {
+                    fillColor : "rgba(220,220,220,0.5)",
+                    strokeColor : "rgba(151,187,205,1)",
+                    pointColor : "blue",
+                    pointStrokeColor : "#fff",
+                    data : [10,40,44,40,45,24,45,40,44,40,45,24,45,40,44,40,45,24,45,40,44,40,45,24,45,40,44,40,45,24,45]
+                }
+            ]
+        }
+    var myLine = new Chart(document.getElementById("month-canvas").getContext("2d")).Line(lineChartData);
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	canvas{margin:10px auto;}
+</style>
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var canvas2d = document.getElementById("test").getContext("2d");
+	var deg = 0;
+	var test = function(deg){
+	    var r = deg*Math.PI/180;   //canvas绘制圆形进度
+	    canvas2d.clearRect(0,0,200,200);   //先清理
+	    canvas2d.beginPath();  //路径开始
+	    //canvas2d.fillStyle = "#fff"; //填充颜色
+	    canvas2d.strokeStyle = "#FF7F00"; //canvas边框颜色
+	    canvas2d.lineWidth = 6; //线宽
+	    canvas2d.arc(100,100,50,0-90*Math.PI/180,r-90*Math.PI/180,false); //canvas绘制弧形
+	    //canvas2d.fill();
+	    canvas2d.stroke();
+	    //canvas2d.closePath(); 
+	};
+	//使用定时器让html5 canvas绘制圆形进度动起来
+	var t = setInterval(function(){
+	    deg+=10;
+	    test(deg);
+	    if(deg>360){
+	        clearInterval(t);
+	    }
+	    console.log(deg);
+	},20);
+});
+</script>
+</head>
+<body>
+	    <canvas id="test" width="200" height="200">20%</canvas>
+</body>
+</html>

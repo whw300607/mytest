@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>兼容性良好动画效果复杂的鼠标悬停图文遮罩效果</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+
+<!-- 代码部分begin -->
+<div class="lanren">
+	<ul>
+		<li>
+			<a href="#" class="a1">
+				<img src="images/1.jpg">
+				<div class ="divA">
+					<p class="p1">迪拜六日跟团游</p>
+					<p class="p2">香港直飞+精选阿联酋航空(A380豪华客机)+当晚抵达全程入住4晚五星酒店！</p>
+					<p class="p3">¥<span>6999</span>起</p>
+				</div>
+			</a>
+			<a href="#" class = "a2">
+					<p class="p4">迪拜六日跟团游</p>
+					<p class="p5">香港直飞+精选阿联酋航空(A380豪华客机)+当晚抵达全<br>程入住4晚五星酒店！</p>
+					<p class="p6">¥<span>6999</span>起</p>
+					<p class="p7">查看详情></p>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="a1">
+				<img src="images/2.jpg">
+				<div class ="divA">
+					<p class="p1">埃及+迪拜10日跟团游</p>
+					<p class="p2">全程4-5星酒店/金字塔/博特馆/度假圣地红海洪加达/迪拜/阿布扎比一次走遍！</p>
+					<p class="p3">¥<span>8399</span>起</p>
+				</div>
+			</a>
+			<a href="#" class = "a2">
+					<p class="p4">埃及+迪拜10日跟团游</p>
+					<p class="p5">全程4-5星酒店/金字塔/博特馆/度假圣地红海洪加达<br>/迪拜/阿布扎比一次走遍！</p>
+					<p class="p6">¥<span>8399</span>起</p>
+					<p class="p7">查看详情></p>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="a1">
+				<img src="images/3.jpg">
+				<div class ="divA">
+					<p class="p1">土耳其10日跟团游</p>
+					<p class="p2">全程五星/免费车载WIFI/棉花堡/爱琴海/ 特洛伊古城/伊斯坦布尔风情!</p>
+					<p class="p3">¥<span>8499</span>起</p>
+				</div>
+			</a>
+			<a href="#" class = "a2">
+					<p class="p4">土耳其10日跟团游</p>
+					<p class="p5">全程五星/免费车载WIFI/棉花堡/爱琴海/<br> 特洛伊古城/伊斯坦布尔风情!！</p>
+					<p class="p6">¥<span>8499</span>起</p>
+					<p class="p7">查看详情></p>
+			</a>
+		</li>
+		<li>
+			<a href="#" class="a1">
+				<img src="images/4.jpg">
+				<div class ="divA">
+					<p class="p1">泰国曼谷+金沙岛+芭堤雅6日跟团游</p>
+					<p class="p2">香港往返/深圳往返【德国啤酒屋】+品尝当地著名【78层自助餐】/品质保证</p>
+					<p class="p3">¥<span>2199</span>起</p>
+				</div>
+			</a>
+			<a href="#" class = "a2">
+					<p class="p4">泰国曼谷+金沙+芭堤雅6日跟团游</p>
+					<p class="p5">香港往返/深圳往返【德国啤酒屋】+品尝当地著名<br>【78层自助餐】/品质保证</p>
+					<p class="p6">¥<span>2199</span>起</p>
+					<p class="p7">查看详情></p>
+			</a>
+		</li>
+	</ul>
+</div>
+<script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.lanren li').mouseenter(function(){
+		$(this).find('.divA').stop().animate({bottom:'-66px'});
+		$(this).find('.a2').css({left:'0'})
+		$(this).children('.a2').find('.p4').css({left:'0'})
+		$(this).children('.a2').find('.p5').css({left:'0'})
+		$(this).children('.a2').find('.p6').css({transform:'scale(1)'})
+		$(this).children('.a2').find('.p7').css({bottom:'25px'})
+	})
+	$('.lanren li').mouseleave(function(){
+		$(this).find('.divA').stop().animate({bottom:'0px'});
+		$(this).find('.a2').css({left:-$(this).width()})
+		$(this).children('.a2').find('.p4').css({left:-$(this).width()})
+		$(this).children('.a2').find('.p5').css({left:-$(this).width()})
+		$(this).children('.a2').find('.p6').css({transform:'scale(1.3)'})
+		$(this).children('.a2').find('.p7').css({bottom:'-50px'})
+	})
+})
+</script>
+<!-- 代码部分end -->
+
+</body>
+</html>

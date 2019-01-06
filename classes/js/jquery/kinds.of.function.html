@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	function abc(){  
+	    // code to process  
+	    }  
+	/* function abc(x,y){
+		return x+y; 
+		} */
+	/* alert(typeof abc);// "function"  
+    var abc = new Function("x","y","return x*y;");  
+    alert(abc(2,3)); // "6"  */
+    /* alert(typeof function(){});// "function"  */
+    /* alert(typeof function(x,y){return x+y;});// "function"  
+    alert(typeof new Function("x","y","return x*y;"))// "function" */
+    /* var abc=function(x,y){  
+        return x+y;  
+      }  
+      alert(abc(2,3)); // "5"   */
+      /* alert((function(x,y){return x+y;})(2,3));// "5"  
+      alert((new Function("x","y","return x*y;"))(2,3));// "6"   */
+      /* var abc=function(x,y){return x+y;};// 把匿名函数对象赋给abc  
+      // abc的constructor就和匿名函数的constructor一样了。也就是说，两个函数的实现是一样的。  
+      alert((abc).constructor==(function(x,y){return x+y;}).constructor);  */
+      var abc=function(y){  
+    	    var x=y;// 这个是局部变量  
+    	    return function(){  
+    	      alert(x++);// 就是这里调用了闭包特性中的一级函数局部变量的x，并对它进行操作  
+    	      alert(y--);// 引用的参数变量也是自由变量  
+    	    }}(5);// 初始化  
+    	    abc();// "5" "5"  
+    	    abc();// "6" "4"  
+    	    abc();// "7" "3"  
+    	    alert(x);// 报错！“x”未定义！  
+</script>
+</head> 
+<body>
+	
+</body>
+</html>

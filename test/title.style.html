@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>CSS自定义个性Title标签丨芯晴网页特效丨CsrCode.Cn</title>
+<meta http-equiv="content-Type" content="text/html;charset=gb2312">
+<style>
+	body{text-align:center;}
+	#tooltip{border:1px solid red; background:#FF6;
+	position:absolute;
+	padding:1px;
+	color:#333;
+	display:none;
+}
+</style>
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.min.js">
+	
+</script>
+<script type="text/javascript">
+	$(function(){
+		var x=5;
+		var y=15;
+		$("a.tooltip").mouseover(function(e){
+			this.myTitle=this.title;
+			this.title="";
+			var tooltip="<div id='tooltip'>"+this.myTitle+"</div>";		//创建div元素
+			$("#link").append(tooltip);		//追加到文档中
+			$("#tooltip").css({"top":(e.pageY+y) + "px","left": (e.pageX+x) + "px"}).show(200);	//设置X Y坐标，并且显示
+		}).mouseout(function(){
+			this.title=this.myTitle;
+			$("#tooltip").remove();		//移除
+		}).mousemove(function(e){
+			$("#tooltip").css({"top":(e.pageY+y) + "px","left":(e.pageX+x) + "px"});
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="link">
+		<p><a href="#" class="tooltip" title="这是我的超链接提示1">提示1</a></p>
+	    <p><a href="#" class="tooltip" title="这是我的超链接提示2">提示2</a></p>
+	    <p><a href="#" title="这是我的超链接提示1">自带提示1</a></p>
+	    <p><a href="#" title="这是我的超链接提示2">自带提示2</a></p>
+	</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<script type="text/javascript" src="classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+.login-iunpt .input {
+    width: 263px;
+    height: 28px;
+    padding-left: 25px;
+}
+input[type="text"], input[type="password"] {
+    padding: 5px;
+    line-height: 25px;
+    border: 1px #ddd solid;
+    font-size: 14px;
+}
+.ml_15 {
+    margin-left: 15px;
+}
+.m {
+	text-align: center;
+	font-size: 40px;
+	padding-top: 100px;
+}
+.login-iunpt {
+	position: relative;
+	width: 295px;
+	margin: 15px auto;
+	overflow: hidden;
+	clear: both;
+}
+.login-iunpt .input[name="code"]{
+	width:123px;
+	padding-left: 10px;
+}
+</style>
+</head>
+<body>
+	<div class="m">
+		<div class="login-iunpt">
+			<input name="code" type="text" class="input" placeholder="请输入验证码" maxlength="4" />
+			<img class="img ml_15" src="{:U(\'randcode\')}" width="140" height="40" title="不区分大小写" />
+		</div>
+	</div>
+</body>
+</html>

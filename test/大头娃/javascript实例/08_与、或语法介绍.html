@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>&& || 的语法介绍</title>
+<script type="text/javascript">
+	// js 中除了 0, '', null , false , NaN ,undefined 为false其余都是true
+	if(0 || '' || false || NaN || undefined){
+		console.info("true");	
+	}else{
+		console.info("false");	
+	}
+	// js 中适当的使用 && || 可以精讲代码,但是仅仅只能在JS中使用 Java NET中不具备此功能
+	console.info(false && 'java');  // false
+	console.info(true && 'java');   // java
+	console.info(true && 'java' && 'net');   // net
+	console.info('java' || 'net');   // java
+	console.info(false || 'net');    // net
+	// 案例1: a>5 输出你好!
+	var a=4;
+	a>5 && alert('你好!');
+</script>
+</head>
+
+<body>
+</body>
+</html>

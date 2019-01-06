@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link type="text/css" href="css/common.css" rel="stylesheet" />
+<link type="text/css" href="css/global.css" rel="stylesheet" />
+<style type="text/css">
+	#desktop a img,
+	#textbox{
+		width: 100px;
+		height: 100px;
+	}
+	#textbox{background-color:#ea5415;}
+</style>
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#desktop a img").each(function(index){
+			alert($(this));
+			alert(this);
+			});
+	    $("#textbox").hover(
+	    		function(){
+	    			this.title = "Test";
+	    			},
+	    		function() {
+	    				this.title = "OK";
+	    				}
+	    			);
+	    $("#textbox").hover(
+	    		function(){
+	    			$(this).attr("title", "Test");   
+	    			},
+	    		function() {
+	    				$(this).attr("title", "OK"); 
+	    				}
+	    			);
+	    });
+</script>
+</head>
+<body>
+	<div id="desktop">
+		<a href="javasctipt:void(0)"> 
+			<img src="form-sprite.png" />
+		</a>
+	</div>
+	<div id="textbox">
+		
+	</div>
+</body>
+</html>

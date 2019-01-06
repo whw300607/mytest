@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+	@font-face {font-family: 'RTWSYueRoudGoDemo-Regular';src: url('fonts/RTWSYueRoudGoDemo-Regular.otf');}
+	ul li{float:left;width:240px;height:30px;margin-right:10px;line-height:30px;font-family: RTWSYueRoudGoDemo-Regular;cursor:pointer;text-align:center;background:#ccc;}
+	ul li:hover,ul li.cur{background:#00a2e3;color:#fff;}
+	.processes{position:relative;}
+	.processes .cont{height:400px;}
+	.processes .cont .item{width:850px;height:400px;text-align:center;line-height:200px;font-size:30px;margin:10px auto 0;}
+	.processes .cont .item1{background-color:#ea5415;}
+	.processes .cont .item2{background-color:#ccc;}	
+	.processes .cont .item3{background-color:#00a2e3;}	
+	.processes .cont .item4{background-color:blue;}	
+	.processes .arrows{}
+	.processes .arrows span{position:absolute;top:37%;display:block;width:50px;height:50px;cursor:pointer;font-size:50px;}
+	.processes .arrows span.icon-chevron-left{left:0;}	
+	.processes .arrows span.icon-chevron-right{right:0;}	
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		//方法1
+		var index=0;
+		var length=$(".flow li").length;
+		
+		//获取当前li的索引值
+		$(".flow li").click(function(){
+			index=$(this).index();
+			show();
+		});
+		
+		//左点击
+		$(".icon-chevron-left").click(function(){
+			index--;
+			if(index==-1){
+				index=length-1;
+			}
+			show();
+		});
+		
+		//右点击
+		$(".icon-chevron-right").click(function(){
+			index++;
+			if(index==length){
+				index=0;
+			}
+			//alert(index);
+			show();
+		});
+		
+		//调用show()
+		function show(){
+			$(".processes .item").eq(index).removeClass("none").siblings().addClass("none");
+			$(".flow li").eq(index).addClass("cur").siblings().removeClass("cur");
+		}
+		
+		/* //方法2
+		//点击流程文字下方切换为对应内容
+		var index=0;
+		$(".flow li").click(function(){
+			index=$(this).index();
+		});
+		
+		//右切换箭头
+		$(".icon-chevron-right").click(function(){
+			index++;
+			if(index==4){
+				index=0;
+			}
+			$(".processes .item").eq(index).removeClass("none").siblings().addClass("none");
+			$(".flow li").eq(index).addClass("cur").siblings().removeClass("cur");
+		});
+		
+		//左切换箭头
+		$(".icon-chevron-left").click(function(){
+			index--;
+			if(index==-1){
+				index=3;
+			}
+			$(".processes .item").eq(index).removeClass("none").siblings().addClass("none");
+			$(".flow li").eq(index).addClass("cur").siblings().removeClass("cur");
+		}); */
+	});
+</script>
+</head>
+<body>
+	<div class="m mt25">
+		<ul class="clearfix flow">
+			<li class="cur">流程1</li>
+			<li>流程2</li>
+			<li>流程3</li>
+			<li>流程4</li>
+		</ul>
+		<div class="processes">
+			<div class="arrows">
+				<span class="icon-chevron-right"></span>
+				<span class="icon-chevron-left"></span>
+			</div>
+			<div class="cont">
+				<div class="item item1">111111111</div>
+				<div class="item item2">222222222</div>
+				<div class="item item3">333333333</div>
+				<div class="item item4">444444444</div>
+			</div>	
+		</div>
+	</div>
+</body>
+</html>

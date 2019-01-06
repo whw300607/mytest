@@ -1,0 +1,23 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>&& || 的案例使用</title>
+<script type="text/javascript">
+	/*
+		成长速度为5显示1个箭头 
+		成长速度为10显示2个箭头 
+		成长速度为12显示3个箭头 
+		其他都显示都显示0各箭头 
+	*/
+	var speed=15;
+	var level=(speed<=5 && 1) || (speed<=10 && 2) || (speed<=12 && 3) || 0;
+	console.info(level);
+	// 问: 这种写法当然比较简洁高效,但是可读性比较差,有意义吗?
+	// 答: 此写法一般用于jquery和其它js插件的源码中
+</script>
+</head>
+
+<body>
+</body>
+</html>

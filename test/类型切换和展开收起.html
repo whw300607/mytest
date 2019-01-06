@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link type="text/css" href="css/common.css" rel="stylesheet" />
+<link type="text/css" href="css/global.css" rel="stylesheet" />
+<style type="text/css">
+.main .switch_btn a span{display:inline-block;width:25px;height:25px;background:url(arrows.jpg) no-repeat;transform:rotate(-90deg);-ms-transform:rotate(-90deg); 	/* IE 9 */-moz-transform:rotate(-90deg); 	/* Firefox */-webkit-transform:rotate(-90deg); /* Safari 和 Chrome */-o-transform:rotate(-90deg); 	/* Opera */}
+.main .switch_btn a.invsbl span{transform:rotate(90deg);-ms-transform:rotate(90deg); 	/* IE 9 */-moz-transform:rotate(90deg); 	/* Firefox */-webkit-transform:rotate(90deg); /* Safari 和 Chrome */-o-transform:rotate(90deg); 	/* Opera */}
+.main ul.content li{width:200px;height:50px;margin-bottom:5px;background-color:#ea5415;}
+.main .hide {display: none;}
+</style>
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".switch_btn").find("a").click(function(){
+			if($(this).attr("attrDirect")=="down"){
+				$(this).addClass("hide").siblings().removeClass("hide");
+			}
+			else if($(this).attr("attrDirect")=="up"){
+				$(this).addClass("hide").siblings().removeClass("hide");
+			}
+			$("ul").find(".hide").fadeToggle();
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="main m">
+		<div class="switch_btn">
+			<a href="javascript:void(0)" class="invsbl" attrDirect="down"><span></span>查看所有星级权限</a> 
+			<a href="javascript:void(0)" class="vsbl hide" attrDirect="up"><span></span>仅显示我所有星级权限</a>
+		</div>
+		<ul class="content">
+			<li class="hide"></li>
+			<li class="hide"></li>
+			<li class="hide"></li>
+			<li class="hide"></li>
+			<li class="hide"></li>
+			<li class="hide"></li>
+		</ul>
+	</div>
+</body>
+</html>
+
+
+

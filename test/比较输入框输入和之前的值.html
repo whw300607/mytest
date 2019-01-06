@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>获取输入框的值</title>
+        <script type="text/javascript">
+            window.onload = function(){
+			    var a = document.getElementById("test");
+			    a.onkeyup = function(){
+			        var b = this.value;
+			        document.getElementById("test2").value = b;
+			    }
+			}
+        </script>
+    </head>
+    <body>
+		<input type="text" id="test" value="" />
+		<input type="text" id="test2" value="" />
+    </body>
+</html>

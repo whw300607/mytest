@@ -1,0 +1,523 @@
+<html><head><meta charset="utf-8"><title>ECharts Gallery</title><script async="" src="http://fex.bdstatic.com/hunter/alog/feature.min.js?v=150727"></script><script async="" src="http://fex.bdstatic.com/hunter/alog/element.min.js?v=160118"></script><script async="" src="http://fex.bdstatic.com/hunter/alog/monkey.min.js"></script><script async="" src="http://fex.bdstatic.com/hunter/alog/speed.min.js?v=170721"></script><script async="" src="http://fex.bdstatic.com/hunter/alog/dp.min.js?v=-17556-17556"></script><script src="//hm.baidu.com/hm.js?99f7569c6c41b300eebba455946c8b45"></script><script async="" src="http://fex.bdstatic.com/hunter/alog/alog.min.js?v=-17556-17556"></script><script>window.alogObjectConfig = {
+    sample: '1',
+
+    product: '773',
+    page: '773_1',
+    monkey_page: '',
+    speed_page: '',
+
+    speed: {
+        sample: '1'
+    },
+
+    monkey: {
+        sample: '1'
+    },
+
+    exception: {
+        sample: '1'
+    },
+
+    feature: {
+        sample: '1'
+    },
+
+    cus: {
+        sample: '1'
+    }
+};
+void function(a,b,c,d,e,f,g){a.alogObjectName=e,a[e]=a[e]||function(){(a[e].q=a[e].q||[]).push(arguments)},a[e].l=a[e].l||+new Date,d="https:"===a.location.protocol?"https://fex.bdstatic.com"+d:"http://fex.bdstatic.com"+d;var h=!0;if(a.alogObjectConfig&&a.alogObjectConfig.sample){var i=Math.random();a.alogObjectConfig.rand=i,i>a.alogObjectConfig.sample&&(h=!1)}h&&(f=b.createElement(c),f.async=!0,f.src=d+"?v="+~(new Date/864e5)+~(new Date/864e5),g=b.getElementsByTagName(c)[0],g.parentNode.insertBefore(f,g))}(window,document,"script","/hunter/alog/alog.min.js","alog"),void function(){function a(){}window.PDC={mark:function(a,b){alog("speed.set",a,b||+new Date),alog.fire&&alog.fire("mark")},init:function(a){alog("speed.set","options",a)},view_start:a,tti:a,page_ready:a}}();
+void function(n){var o=!1;n.onerror=function(n,e,t,c){var i=!0;return!e&&/^script error/i.test(n)&&(o?i=!1:o=!0),i&&alog("exception.send","exception",{msg:n,js:e,ln:t,col:c}),!1},alog("exception.on","catch",function(n){alog("exception.send","exception",{msg:n.msg,js:n.path,ln:n.ln,method:n.method,flag:"catch"})})}(window);
+</script><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="stylesheet" type="text/css" href="dep/bootstrap/css/bootstrap.css"><link rel="stylesheet" type="text/css" href="css/main.css"><link rel="shortcut icon" href="favicon.png"><link rel="stylesheet" href="dep/select2/css/select2.min.css"><link rel="stylesheet" href="dep/select2/css/select2.bootstrap.min.css"><link rel="stylesheet" href="dep/jsonview/jquery.jsonview.min.css"><link rel="stylesheet" href="dep/slick/slick.css"><link rel="stylesheet" href="dep/slick/slick-theme.css"><link rel="stylesheet" href="dep/highlight/github.css"><!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries--><!--[if lt IE 9]><script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script><script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]--><script>window.paceOptions = {
+    ajax: {
+        trackMethods: ['GET', 'POST']
+    }
+}</script><script src="dep/pace/pace.min.js"></script><script>alog('speed.set', 'ht', +new Date);
+</script><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled > .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style>.ace_snippet-marker {    -moz-box-sizing: border-box;    box-sizing: border-box;    background: rgba(194, 193, 208, 0.09);    border: 1px dotted rgba(211, 208, 235, 0.62);    position: absolute;}</style><style>.ace_editor.ace_autocomplete .ace_marker-layer .ace_active-line {    background-color: #CAD6FA;    z-index: 1;}.ace_editor.ace_autocomplete .ace_line-hover {    border: 1px solid #abbffe;    margin-top: -1px;    background: rgba(233,233,253,0.4);}.ace_editor.ace_autocomplete .ace_line-hover {    position: absolute;    z-index: 2;}.ace_editor.ace_autocomplete .ace_scroller {   background: none;   border: none;   box-shadow: none;}.ace_rightAlignedText {    color: gray;    display: inline-block;    position: absolute;    right: 4px;    text-align: right;    z-index: -1;}.ace_editor.ace_autocomplete .ace_completion-highlight{    color: #000;    text-shadow: 0 0 0.01em;}.ace_editor.ace_autocomplete {    width: 280px;    z-index: 200000;    background: #fbfbfb;    color: #444;    border: 1px lightgray solid;    position: fixed;    box-shadow: 2px 3px 5px rgba(0,0,0,.2);    line-height: 1.4;}</style><script src="http://gallery.echartsjs.com/dep/ace/src-min/mode-javascript.js"></script><style id="ace-github">.ace-github .ace_gutter {background: #e8e8e8;color: #AAA;}.ace-github  {background: #fff;color: #000;}.ace-github .ace_keyword {font-weight: bold;}.ace-github .ace_string {color: #D14;}.ace-github .ace_variable.ace_class {color: teal;}.ace-github .ace_constant.ace_numeric {color: #099;}.ace-github .ace_constant.ace_buildin {color: #0086B3;}.ace-github .ace_support.ace_function {color: #0086B3;}.ace-github .ace_comment {color: #998;font-style: italic;}.ace-github .ace_variable.ace_language  {color: #0086B3;}.ace-github .ace_paren {font-weight: bold;}.ace-github .ace_boolean {font-weight: bold;}.ace-github .ace_string.ace_regexp {color: #009926;font-weight: normal;}.ace-github .ace_variable.ace_instance {color: teal;}.ace-github .ace_constant.ace_language {font-weight: bold;}.ace-github .ace_cursor {color: black;}.ace-github.ace_focus .ace_marker-layer .ace_active-line {background: rgb(255, 255, 204);}.ace-github .ace_marker-layer .ace_active-line {background: rgb(245, 245, 245);}.ace-github .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-github.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-github.ace_nobold .ace_line > span {font-weight: normal !important;}.ace-github .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-github .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-github .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-github .ace_gutter-active-line {background-color : rgba(0, 0, 0, 0.07);}.ace-github .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-github .ace_invisible {color: #BFBFBF}.ace-github .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-github .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-github */</style><script src="http://gallery.echartsjs.com/dep/ace/src-min/snippets/text.js"></script><script src="http://gallery.echartsjs.com/dep/ace/src-min/snippets/javascript.js"></script></head><!--[if lte IE 8]><body class="lower-ie"><div id="lowie-main"><img src="./img/forie.png"></div><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99f7569c6c41b300eebba455946c8b45";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script></body><![endif]-->
+<!--[if (gt IE 8)|!(IE)]><!--><body class="fullpage-body  pace-done"><div class="pace  pace-inactive"><div class="pace-progress" style="transform: translate3d(100%, 0px, 0px);" data-progress-text="100%" data-progress="99">
+  <div class="pace-progress-inner"></div>
+</div>
+<div class="pace-activity"></div></div><nav class="navbar navbar-default navbar-static-top"><div class="container-fluid"><button type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><div class="navbar-header"><a href="./explore.html" class="navbar-brand"><img src="img/logo.png" alt=""></a></div><div id="navbar-collapse" class="collapse navbar-collapse"><ul class="nav navbar-nav navbar-right"><div id="nav-container"><div class="to-echarts"></div><div id="chart-title">
+    <h4 title="嵌套饼图">
+        <a href="editor.html?c=xB1scQ7Urz&amp;v=1">
+            <span class="icon icon-fork" data-placement="bottom" title="" data-toggle="tooltip" data-original-title="该项目从其它项目克隆"></span>
+        </a>
+        嵌套饼图
+    </h4>
+    <h5>
+        <span>
+            匿名用户
+        </span>
+        
+        on 7 分钟前
+    </h5>
+</div><div>
+    <ul id="nav-chart-toolbox" class="nav navbar-nav navbar-left">
+        <li>
+            <a href="javascript:;" data-placement="bottom" title="" data-toggle="tooltip" data-original-title="作品使用的第三方脚本">
+                <span class="icon icon-script" alt="脚本"></span>脚本
+            </a>
+        </li>
+        <li data-placement="bottom" title="" data-toggle="tooltip" data-original-title="版本切换">
+            <a href="javascript:;" id="change-version">
+                <span class="icon icon-version"></span>
+                2
+            </a>
+        </li>
+        <li>
+            <a id="save-btn" href="javascript:;" data-placement="bottom" title="" data-toggle="tooltip" data-original-title="保存项目">
+                <span class="icon icon-save" alt="保存"></span>保存
+            </a>
+        </li>
+        <li>
+            <a id="clone-btn" href="javascript:;" data-placement="bottom" title="" data-toggle="tooltip" data-original-title="克隆项目">
+                <span class="icon icon-fork" alt="克隆"></span>克隆
+            </a>
+        </li>
+        
+        
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            <a id="comment-btn" href="javascript:;" data-placement="bottom" title="" data-toggle="tooltip" data-original-title="详情及评论">
+                <span class="icon icon-comment" alt="详情及评论"></span>0
+            </a>
+        </li>
+        
+        <li id="nav-toolbox-mode">
+            <a id="view-mode-switch" data-placement="bottom" data-container="body" href="preview.html?c=xHk5oQQIBG&amp;v=2" title="" data-toggle="tooltip" data-original-title="切换为预览模式，你可以在预览模式下查看示例预览的效果">
+                预览
+            </a>
+        </li>
+    </ul>
+</div></div>
+<li>
+    <a id="login-btn">登录</a>
+</li>
+</ul></div></div></nav><div id="modal-container"><div class="modal fade" id="layout-config-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4> 布局设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-1 text-right">
+                        <label>行数</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number">
+                    </div>
+                    <div class="col-md-1 text-right">
+                        <label>列数</label>
+                    </div>
+                    <div class="col-md-3">
+                        <input type="number">
+                    </div>
+                    <div class="col-md-4">
+                        <input name="layout-policy" value="percentage" checked="checked" type="radio"> 百分比
+                        <input name="layout-policy" value="pixel" type="radio"> 像素
+                    </div>
+                </div>
+                <div class="layout-container layout-NxM">
+                    <div style="width: 0px; height: 0px;">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-contrast" data-dismiss="modal">修改</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="external-script-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>作品使用的第三方脚本</h4>
+            </div>
+            <div class="modal-body">
+                <div>
+                    <div class="scripts-edit">
+                        <form>
+                            <div class="form-group">
+                                <input class="form-control" placeholder="请输入脚本链接" type="text">
+                            </div>
+                        </form>
+                        <button class="btn btn-default">+ 添加脚本</button>
+                    </div>
+                    <div class="common-external-scripts">
+                        <h4>常用脚本</h4>
+                        <div>
+                            <h5>组件扩展</h5>
+                            <div>
+                                <span>
+                                    <a href="javascript:;" data-toggle="tooltip" data-placement="top" title="" data-original-title="提供丰富的三维可视化组件, https://github.com/ecomfe/echarts-gl">
+                                        ECharts GL
+                                    </a>
+                                </span><span>
+                                    <a href="javascript:;" data-toggle="tooltip" data-placement="top" title="" data-original-title="百度地图扩展">
+                                        百度地图
+                                    </a>
+                                </span><span>
+                                    <a href="javascript:;" data-toggle="tooltip" data-placement="top" title="" data-original-title="水球图组件, https://github.com/ecomfe/echarts-liquidfill/">
+                                        水球图
+                                    </a>
+                                </span><span>
+                                    <a href="javascript:;" data-toggle="tooltip" data-placement="top" title="" data-original-title="字符云组件, https://github.com/ecomfe/echarts-wordcloud/">
+                                        字符云
+                                    </a>
+                                </span>
+                            </div>
+                        </div><div>
+                            <h5>数据处理</h5>
+                            <div>
+                                <span>
+                                    <a href="javascript:;" data-toggle="tooltip" data-placement="top" title="" data-original-title="提供包含的功能有直方图、聚类、回归、以及常用的汇总统计工具, https://github.com/ecomfe/echarts-stat/">
+                                        统计插件
+                                    </a>
+                                </span><span>
+                                    <a href="javascript:;" data-toggle="tooltip" data-placement="top" title="" data-original-title="提供 gexf 文件解析，boxplot 数据预处理(prepareBoxplot)">
+                                        dataTool
+                                    </a>
+                                </span><span>
+                                    <a href="javascript:;" data-toggle="tooltip" data-placement="top" title="" data-original-title="papaparse 是一个第三方库，提供 csv 解析的功能。http://papaparse.com/">
+                                        papaparse
+                                    </a>
+                                </span>
+                            </div>
+                        </div><div>
+                            <h5>地图</h5>
+                            <div>
+                                <span>
+                                    <a href="javascript:;" data-toggle="tooltip" data-placement="top" title="" data-original-title="中国地图 geoJon">
+                                        china
+                                    </a>
+                                </span><span>
+                                    <a href="javascript:;" data-toggle="tooltip" data-placement="top" title="" data-original-title="世界地图 geoJon">
+                                        world
+                                    </a>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-contrast">确认</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="data-list-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>数据管理</h4>
+                <div class="search">
+                    <span class="icon icon-search"></span>
+                    <input class="form-control" placeholder="搜索历史数据" type="text">
+                </div>
+            </div>
+            <div class="modal-body">
+                
+                <div id="data-upload-alert"></div>
+
+                <div class="upload-data">
+                    <button class="btn btn-contrast">
+                        <span class="icon icon-upload"></span>
+                        上传数据
+                    </button>
+                    <p>
+                        支持小于 5M 任意格式（csv, xlsx, json, xml, ...）的数据文件 <br>上传后可以通过生成的文件链接异步获取托管的数据。
+                    </p>
+                </div>
+                
+                
+                <h5>
+                    <span class="icon icon-time"></span>
+                    历史数据 <span class="data-count">
+                        
+                        0 条
+                    </span>
+                </h5>
+                <div class="no-data">
+                    <img src="img/no-more-lg.png" alt="">无历史数据
+                </div>
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="edit-history-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4>代码修改记录</h4>
+            </div>
+            <div class="modal-body">
+                
+                <!-- <div class="no-data" v-else>
+                    <img src="img/no-more-lg.png" alt="">暂无改动
+                </div> -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div><div class="modal fade" id="chart-comments-modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4>作品详情及评论</h4>
+            </div>
+            <div class="modal-body">
+                <div class="comment-container">
+                    <div id="comment-chart-detail"></div>
+                    <hr>
+                    <h2>评论</h2>
+                    <ol class="comments">
+                        
+                    </ol>
+
+                    <div id="chart-new-comment">
+                        
+                        <p><a href="javascript:;">登录</a>后，即可发表评论。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><div>
+    <div class="modal fade" id="chart-choose-category">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>你创建该图表是为了</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">反馈或咨询问题</button>
+                    <button type="button" class="btn btn-contrast" data-dismiss="modal">分享自己的作品</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="chart-confirm-save-anonymous">
+        <div class="modal-dialog modal-xs">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>你还未登录，是否继续匿名创建问题</h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-contrast" data-dismiss="modal">继续</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="chart-info-edit-modal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4>保存作品</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-sm-5 thumb">
+                        <img src="http://echarts.baidu.com/ecg-storage/img/xHk5oQQIBG.png?v=1516807083115" width="100%">
+                        <p>对当前截图不满意？你还可以</p>
+                        <a type="button" class="btn btn-default btn-sm">上传本地截图</a>
+                        &nbsp;
+                        <a type="button" class="btn btn-default btn-sm">重新截图</a>
+                    </div>
+                    <div class="col-sm-7 detail">
+                        <form>
+                            
+                            <div class="form-group">
+                                <label for="">作品名称</label>
+                                <input class="form-control" placeholder="未命名作品" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="">作品描述</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="">标签</label>
+                                <div class="form-group builtin-tags">
+                                    <span class="label label-component">
+                                            legend
+                                        </span><span class="label label-chart">
+                                            pie
+                                        </span><span class="label label-component">
+                                            tooltip
+                                        </span>
+                                </div>
+                                <select multiple="" placeholder="输入更多标签" id="chart-tags" tabindex="-1" class="select2-hidden-accessible" aria-hidden="true"></select><span class="select2 select2-container select2-container--default" dir="ltr" style="width: 35px;"><span class="selection"><span class="select2-selection select2-selection--multiple" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="-1"><ul class="select2-selection__rendered"><li class="select2-search select2-search--inline"><input class="select2-search__field" tabindex="0" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" role="textbox" aria-autocomplete="list" placeholder="输入更多标签" style="width: 100px;" type="search"></li></ul></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="">权限</label>
+                                <div class="btn-group clearfix" data-toggle="buttons">
+                                    <label class="btn btn-sm btn-default">
+                                        <input name="auth" value="1" type="radio">
+                                        公开可编辑
+                                    </label>
+                                    <label class="btn btn-sm btn-default active">
+                                        <input name="auth" value="2" type="radio">
+                                        公开只读
+                                    </label>
+                                    <label class="btn btn-sm btn-default">
+                                        <input name="auth" value="4" type="radio">
+                                        输密码后可读写
+                                    </label>
+                                    <label class="btn btn-sm btn-default">
+                                        <input name="auth" value="5" type="radio">
+                                        输密码后只读
+                                    </label>
+                                    <label class="btn btn-sm btn-default">
+                                        <input name="auth" value="3" type="radio">
+                                        仅自己可见
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">作品默认版本</label>
+                                <select>
+                                    <option value="0">最新</option>
+                                    <option value="2">2</option><option value="1">1</option>
+                                </select>
+                            </div>
+                            <!-- <div class="checkbox">
+                                <label><input type="checkbox" v-model="alwaysLatest" />
+                                是否一直使用最新版本的 ECharts</label>
+                            </div> -->
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-close" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-contrast">确认保存</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div></div><div id="editor-main"><div id="code" style="width: 546.4px;">
+    <div class="panels">
+        <div id="control-panel">
+            <div id="code-info"><span class="code-info-time">23:24:46</span><span class="code-info-type-info">图表已生成</span></div>
+            <div class="control-btn-panel">
+                
+                <a id="tidy-btn" href="javascript:;" class="tidy-code" data-placement="bottom" title="" data-toggle="tooltip" data-original-title="将代码整理格式化">
+                    <span class="icon icon-tidy"></span>
+                    &nbsp;整理代码
+                </a>
+                <a href="javascript:;" data-placement="bottom" title="" class="live-coding" data-toggle="tooltip" data-original-title="是否实时刷新">
+                    <span class="icon icon-live"></span>
+                </a>
+                <a id="refresh-btn" class="btn btn-default btn-sm" ,="" href="javascript:;">
+                    <span class="icon icon-refresh"></span>
+                    &nbsp;刷新
+                </a>
+            </div>
+        </div>
+        <div>
+            <ul id="code-panel-tab-nav" class="nav nav-tabs" role="tablist">
+                <li role="presentation">
+                    <a href="#computed-panel" aria-controls="computed-panel" role="tab" data-toggle="tab">属性</a>
+                </li>
+                <li role="presentation" class="active">
+                    <a href="#code-panel" aria-controls="code-panel" role="tab" data-toggle="tab">代码</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div id="code-panel" role="tabpanel" class="tab-pane active ace_editor ace-github"><textarea class="ace_text-input" autocorrect="off" autocapitalize="off" spellcheck="false" style="opacity: 0; height: 16px; width: 7px; left: 0px; top: 0px;" wrap="off"></textarea><div class="ace_gutter"><div class="ace_layer ace_gutter-layer ace_folding-enabled" style="margin-top: -13px; height: 211px; width: 47px;"><div class="ace_gutter-cell " style="height: 16px;">40</div><div class="ace_gutter-cell " style="height: 16px;">41</div><div class="ace_gutter-cell " style="height: 16px;">42</div><div class="ace_gutter-cell " style="height: 16px;">43</div><div class="ace_gutter-cell " style="height: 16px;">44</div><div class="ace_gutter-cell " style="height: 16px;">45</div><div class="ace_gutter-cell " style="height: 16px;">46</div><div class="ace_gutter-cell " style="height: 16px;">47</div><div class="ace_gutter-cell " style="height: 16px;">48</div><div class="ace_gutter-cell " style="height: 16px;">49</div><div class="ace_gutter-cell " style="height: 16px;">50</div><div class="ace_gutter-cell " style="height: 16px;">51</div></div><div class="ace_gutter-active-line" style="top: -589px; height: 16px;"></div></div><div class="ace_scroller" style="left: 47px; right: 17px; bottom: 17px;"><div class="ace_content" style="margin-top: -13px; width: 708px; height: 211px; margin-left: 0px;"><div class="ace_layer ace_print-margin-layer"><div class="ace_print-margin" style="left: 564px; visibility: visible;"></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_text-layer" style="padding: 0px 4px;"><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_lparen">{</span><span class="ace_identifier">value</span><span class="ace_punctuation ace_operator">:</span><span class="ace_constant ace_numeric">335</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">:</span><span class="ace_string">'<span class="ace_cjk" style="width:14px">直</span><span class="ace_cjk" style="width:14px">达</span>'</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_lparen">{</span><span class="ace_identifier">value</span><span class="ace_punctuation ace_operator">:</span><span class="ace_constant ace_numeric">310</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">:</span><span class="ace_string">'<span class="ace_cjk" style="width:14px">邮</span><span class="ace_cjk" style="width:14px">件</span><span class="ace_cjk" style="width:14px">营</span><span class="ace_cjk" style="width:14px">销</span>'</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_lparen">{</span><span class="ace_identifier">value</span><span class="ace_punctuation ace_operator">:</span><span class="ace_constant ace_numeric">234</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">:</span><span class="ace_string">'<span class="ace_cjk" style="width:14px">联</span><span class="ace_cjk" style="width:14px">盟</span><span class="ace_cjk" style="width:14px">广</span><span class="ace_cjk" style="width:14px">告</span>'</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_lparen">{</span><span class="ace_identifier">value</span><span class="ace_punctuation ace_operator">:</span><span class="ace_constant ace_numeric">135</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">:</span><span class="ace_string">'<span class="ace_cjk" style="width:14px">视</span><span class="ace_cjk" style="width:14px">频</span><span class="ace_cjk" style="width:14px">广</span><span class="ace_cjk" style="width:14px">告</span>'</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_lparen">{</span><span class="ace_identifier">value</span><span class="ace_punctuation ace_operator">:</span><span class="ace_constant ace_numeric">1048</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">:</span><span class="ace_string">'<span class="ace_cjk" style="width:14px">百</span><span class="ace_cjk" style="width:14px">度</span>'</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_lparen">{</span><span class="ace_identifier">value</span><span class="ace_punctuation ace_operator">:</span><span class="ace_constant ace_numeric">251</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">:</span><span class="ace_string">'<span class="ace_cjk" style="width:14px">谷</span><span class="ace_cjk" style="width:14px">歌</span>'</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_lparen">{</span><span class="ace_identifier">value</span><span class="ace_punctuation ace_operator">:</span><span class="ace_constant ace_numeric">147</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">:</span><span class="ace_string">'<span class="ace_cjk" style="width:14px">必</span><span class="ace_cjk" style="width:14px">应</span>'</span><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">,</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_lparen">{</span><span class="ace_identifier">value</span><span class="ace_punctuation ace_operator">:</span><span class="ace_constant ace_numeric">102</span><span class="ace_punctuation ace_operator">,</span> <span class="ace_identifier">name</span><span class="ace_punctuation ace_operator">:</span><span class="ace_string">'<span class="ace_cjk" style="width:14px">其</span><span class="ace_cjk" style="width:14px">他</span>'</span><span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_rparen">]</span></div><div class="ace_line" style="height:16px"><span class="ace_indent-guide">    </span>    <span class="ace_paren ace_rparen">}</span></div><div class="ace_line" style="height:16px">    <span class="ace_paren ace_rparen">]</span></div><div class="ace_line" style="height:16px"><span class="ace_paren ace_rparen">}</span><span class="ace_punctuation ace_operator">;</span></div></div><div class="ace_layer ace_marker-layer"></div><div class="ace_layer ace_cursor-layer ace_hidden-cursors"><div class="ace_cursor" style="left: 319px; top: -576px; width: 7px; height: 16px;"></div></div></div></div><div class="ace_scrollbar ace_scrollbar-v" style="width: 22px; bottom: 17px;"><div class="ace_scrollbar-inner" style="width: 22px; height: 816px;"></div></div><div class="ace_scrollbar ace_scrollbar-h" style="height: 22px; left: 47px; right: 17px;"><div class="ace_scrollbar-inner" style="height: 22px; width: 708px;"></div></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: hidden;"><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font: inherit; overflow: visible;"></div><div style="height: auto; width: auto; top: 0px; left: 0px; visibility: hidden; position: absolute; white-space: pre; font-style: inherit; font-variant: inherit; font-stretch: inherit; font-size: inherit; line-height: inherit; font-family: inherit; font-size-adjust: inherit; font-kerning: inherit; font-language-override: inherit; font-feature-settings: inherit; overflow: visible;">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</div></div></div>
+                <div id="computed-panel" role="tabpanel" class="tab-pane"></div>
+            </div>
+        </div>
+        <div id="powered-by">
+            Powered by <a href="http://echarts.baidu.com" target="_blank">echarts</a>
+        </div>
+    </div>
+    <div id="code-toggle-button" title="折叠代码区">
+        <span class="icon icon-left"></span>
+    </div>
+</div><div id="split-gutter" style="width: 4px; left: 546px;"></div><div id="preview" class="right-container" style="left: 550.4px;">
+    <div class="right-panel">
+        <div id="preview-alert"></div>
+
+        <iframe id="chart-iframe" sandbox="allow-modals allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts" src="http://gallerybox.echartsjs.com/chart.html?echarts=latest&amp;external=&amp;theme=default&amp;layout=null&amp;layoutCustomized=false&amp;layoutWidth=[]&amp;layoutHeight=[]" frameborder="0"></iframe>
+
+        <div id="layout-select" class="preview-select">
+            <div class="toggle-button">
+                <span class="icon icon-up"></span>
+                多图布局
+            </div>
+            
+        </div>
+
+        <div id="theme-select" class="preview-select">
+            <div class="toggle-button">
+                <span class="icon icon-up"></span>
+                切换主题
+            </div>
+            
+        </div>
+    </div>
+</div></div><script>void function(e,t){for(var n=t.getElementsByTagName("img"),a=+new Date,i=[],o=function(){this.removeEventListener&&this.removeEventListener("load",o,!1),i.push({img:this,time:+new Date})},s=0;s< n.length;s++)!function(){var e=n[s];e.addEventListener?!e.complete&&e.addEventListener("load",o,!1):e.attachEvent&&e.attachEvent("onreadystatechange",function(){"complete"==e.readyState&&o.call(e,o)})}();alog("speed.set",{fsItems:i,fs:a})}(window,document);
+</script><script type="text/javascript" src="dep/jquery/jquery.min.js"></script><script type="text/javascript" src="dep/bootstrap/js/bootstrap.min.js"></script><script src="dep/slick/slick.min.js"></script><script src="dep/select2/js/select2.full.js"></script><script src="dep/jsonview/jquery.jsonview.js"></script><script src="dep/bootstrap-suggest/bootstrap-suggest.js"></script><script type="text/javascript" src="dep/ace/src-min/ace.js"></script><script type="text/javascript" src="dep/ace/src-min/theme-github.js"></script><script type="text/javascript" src="dep/ace/src-min/ext-language_tools.js"></script><script src="js/editor.js?v=1516034740730"></script><div class="modal fade" id="alert-modal">
+    <div class="modal-dialog modal-xs">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4></h4>
+            </div>
+            
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-contrast" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div><script>if ('ace' === 'ace' || 'ace' === 'codemirror') {
+    galleryEditor.init();
+}
+
+else if ('ace' === 'monaco'){
+    define('jquery', function () {
+        return $;
+    });
+    require.config({
+        paths: {
+            'vs': './dep/monaco-editor/min/vs'
+        }
+    });
+    require(['vs/editor/editor.main'], function () {
+        galleryEditor.init();
+    });
+}</script><script>void function(a,b,c,d,e,f){function g(b){a.attachEvent?a.attachEvent("onload",b,!1):a.addEventListener&&a.addEventListener("load",b)}function h(a,c,d){d=d||15;var e=new Date;e.setTime((new Date).getTime()+1e3*d),b.cookie=a+"="+escape(c)+";path=/;expires="+e.toGMTString()}function i(a){var c=b.cookie.match(new RegExp("(^| )"+a+"=([^;]*)(;|$)"));return null!=c?unescape(c[2]):null}function j(){var a=i("PMS_JT");if(a){h("PMS_JT","",-1);try{a=a.match(/{["']s["']:(\d+),["']r["']:["']([\s\S]+)["']}/),a=a&&a[1]&&a[2]?{s:parseInt(a[1]),r:a[2]}:{}}catch(c){a={}}a.r&&b.referrer.replace(/#.*/,"")!=a.r||alog("speed.set","wt",a.s)}}if(a.alogObjectConfig){var k=a.alogObjectConfig.sample,l=a.alogObjectConfig.rand;d="https:"===a.location.protocol?"https://fex.bdstatic.com"+d:"http://fex.bdstatic.com"+d,k&&l&&l>k||(g(function(){alog("speed.set","lt",+new Date),e=b.createElement(c),e.async=!0,e.src=d+"?v="+~(new Date/864e5)+~(new Date/864e5),f=b.getElementsByTagName(c)[0],f.parentNode.insertBefore(e,f)}),j())}}(window,document,"script","/hunter/alog/dp.min.js");
+
+alog('speed.set', 'drt', +new Date);
+
+var _hmt = _hmt || [];
+(function () {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?99f7569c6c41b300eebba455946c8b45";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script> var _trace_page_logid = 1083687637; </script></body><!--<![endif]--></html>

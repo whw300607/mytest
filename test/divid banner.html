@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>divid banner</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0
+}
+
+ul {
+	list-style: none
+}
+
+img {
+	border: 0
+}
+
+body {
+	position: relative;
+	background: white;
+	text-align: center;
+	font: 12px/120% Arial, simsun, sans-serif;
+	color: white;
+}
+
+.imgWrap {
+	margin: 0 auto
+}
+
+#thumbs {
+	position: absolute;
+	top: 600px;
+	left: 300px;
+	width: 400px
+}
+
+#thumbs li {
+	float: left;
+	margin: 0 5px;
+	cursor: pointer
+}
+
+#thumbs li img {
+	float: left
+}
+
+#thumbs li.current {
+	margin: -3px 2px 0 2px;
+	padding: 1px;
+	border: 2px solid black
+}
+</style>
+<script type="text/javascript">
+	
+	//code by Wander @ cnwander.com
+	var xNum = 2, yNum = 2, xLimit, yLimit;
+	var thumbs, wrap;
+	//页面加载时执行的函数
+	window.onload = function() {
+		var thumbsWrap = $("#thumbs");
+		setStyle(thumbsWrap, "left",+($("body").clientWidth - thumbsWrap.offsetWidth) / 2 + "px");
+		xLimit = [ 0, $("body").clientWidth ];
+		yLimit = [ 0, screen.height - 200 ];
+		thumbs = $("#thumbs li");
+		loadImg(thumbs[0].getAttribute("url"));
+		each(thumbs, thumbEvts);
+		alert(thumbs.length); 
+	}
+	//被点击的小图片加类current
+	function thumbEvts() {
+		this.onclick = thumbDown;
+		function thumbDown(e) {
+			each(thumbs, function() {
+				this.className = "";
+			});
+			this.className = "current";
+			loadImg(this.getAttribute("url"));
+		}
+	}
+	//加载图片
+	function loadImg(url) {
+		var img = new Image();
+		var left, top = 100, imgW, imgH;
+		if (wrap)
+			removeElem(wrap);
+		wrap = addDiv($("body"), {
+			className : "imgWrap"
+		});
+		img.src = url;
+		wrap.innerHTML = "<img src=\"\" style=\"margin-top:250px\"/>";
+		if (img.width > 0)
+			initImg();
+		else
+			img.onload = initImg;
+		//初始图片
+		function initImg() {
+			imgW = img.width;
+			imgH = img.height;
+			left = ($("body").clientWidth - imgW) / 2;
+			wrap.innerHTML = "";
+			numTimer = 0;
+			for (var i = 0; i < xNum; i++) {
+				for (var j = 0; j < yNum; j++)
+					addPiece(i, j);
+			}
+		}
+		//图片分割
+		function addPiece(x, y) {
+			var obj = addDiv(wrap), w = imgW / xNum, h = imgH / yNum, opa = 0, xPos = x
+					* w, yPos = y * h, xStart = randowNum(xLimit[0], xLimit[1]
+					- w), yStart = randowNum(yLimit[0], yLimit[1] - h);
+
+			slideTo();
+
+			function slideTo() {
+				var a = 0.2, toScale = 1, toX = left + xPos, toY = top + yPos, toOpa = 1, timer = window
+						.setInterval(move, 20);
+
+				numTimer++;
+				function move() {
+					xStart += (toX - xStart) * a;
+					yStart += (toY - yStart) * a;
+					opa += (toOpa - opa) * a;
+					if (Math.abs(toX - xStart) <= 1) {
+						xStart = toX;
+						yStart = toY;
+						opa = toOpa;
+						window.clearInterval(timer);
+						numTimer--;
+						if (numTimer <= 0) {
+							setStyle(wrap, "paddingTop", top + "px");
+							wrap.innerHTML = "<img src=\""+url+"\"/>";
+						}
+					}
+					obj.style.cssText = "position:absolute;left:" + xStart
+							+ "px;top: " + yStart + "px;width:" + w
+							+ "px;height:" + h + "px;background:url(" + url
+							+ ") no-repeat -" + xPos + "px -" + yPos
+							+ "px;filter:alpha(opacity=" + opa * 100
+							+ "); -moz-opacity:" + opa + "; opacity:" + opa;
+
+				}
+			}
+
+		}
+	}
+	//添加div子元素
+	function addDiv(where, attr) {
+		var obj = document.createElement("div");
+		if (attr)
+			for ( var key in attr) {
+				if (key == "className")
+					obj.className = attr[key];
+				else
+					obj.setAttribute(key, attr[key]);
+			}
+		where.appendChild(obj);
+		return obj;
+	}
+	//移除子元素
+	function removeElem(elem) {
+		var parent = elem.parentNode;
+		if (parent) {
+			parent.removeChild(elem);
+		}
+	}
+	//遍历对象
+	function each(obj, fuc) {
+		for ( var key in obj) {
+			obj[key].index = key;
+			fuc.call(obj[key]);
+		}
+	}
+	function randowNum(start, end) {
+		return Math.floor(Math.random() * (end - start)) + start;
+	}
+	//设置样式
+	function setStyle() {
+		if (arguments.length == 2 && typeof arguments[1] == "object") {
+			for ( var key in arguments[1]) {
+				arguments[0].style[key] = arguments[1][key];
+			}
+		} else if (arguments.length > 2) {
+			arguments[0].style[arguments[1]] = arguments[2];
+		}
+	}
+	//elements finder
+	function $(s, wrap) {
+		var eleExpr = /([a-zA-Z0-9]*)([#\.]?)(\w+)[^\s+]*/g, result = [ wrap
+				|| document ];
+		while (eleExpr.test(s)) {
+			var tag = RegExp.$1, type = RegExp.$2, content = RegExp.$3, elems = [];
+			for (var i = 0; i < result.length; i++) {
+				var temp;
+				switch (type) {
+				case "#":
+					temp = [ result[i].getElementById(content) ];
+					break;
+				case ".":
+					temp = getElemsByClassName(content, result[i], tag);
+					break;
+				default:
+					temp = result[i].getElementsByTagName(tag + content);
+				}
+				for ( var key in temp) {
+					if (temp[key].nodeType == 1)
+						elems.push(temp[key]);
+				}
+			}
+			result = [];
+			for ( var key in elems) {
+				if (elems[key].nodeType == 1)
+					result.push(elems[key]);
+			}
+		}
+		return result.length == 1 ? result[0] : result;
+		function getElemsByClassName(classname, elem, tag) {
+			var result = [], tag = tag || "*", allElems = elem
+					.getElementsByTagName(tag)
+					|| elem.all;
+			for (var i = 0; i < allElems.length; i++) {
+				var list = allElems[i].className.split(" ");
+				for (var j = 0; j < list.length; j++) {
+					if (list[j] == classname)
+						result.push(allElems[i]);
+				}
+			}
+			return result;
+		}
+	}
+</script>
+</head>
+<body>
+	<ul id="thumbs">
+		<li url="photo01.jpg" class="current"><img src="thumb01.jpg"
+			alt="" /></li>
+		<li url="photo02.jpg"><img src="thumb02.jpg" alt="" /></li>
+		<li url="photo03.jpg"><img src="thumb03.jpg" alt="" /></li>
+	</ul>
+</body>
+</html>

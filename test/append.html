@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">  
+<html>  
+<head>  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">  
+<title>Insert title here</title>  
+<script type="text/javascript" src="jquery.min.js"></script>
+<script type="text/javascript">  
+    $(function (){  
+        //1、创建节点  
+        //2、插入节点，在该节点的子节点的最后面插入  
+        $("<li id='shenzhen'>[shenzhen]</li>").appendTo($("#city"));  
+        $("#city").append("<li id='shenzhen'>shenzhen</li>");  
+     /*     
+        //插入结点：在该节点的子节点的最前面插入  
+        $("<li id='math'>数学</li>").prependTo($("#major"));  
+        $("#major").prepend("<li id='math'>[数学]</li>");  
+          
+        //把新创建的节点添加到指定节点之后  
+        $("<li id='shenzhen'>shenzhen</li>").insertAfter($("#beijing"));  
+        $("#beijing").after("<li id='shenzhen'>[shenzhen]</li>");  
+          
+        //把新创建的节点添加到指定节点之前  
+        $("<li id='shenzhen'>shenzhen</li>").insertBefore($("#beijing"));
+          
+    });  
+</script>  
+</head>  
+<body>  
+    <p>选择你所喜欢的城市？</p>  
+    <ul id="city">  
+        <li>哈尔滨</li>  
+        <li id="beijing">北京</li>  
+        <li>上海</li>  
+        <li>广州</li>  
+    </ul>  
+    <p>选择你所喜欢的专业？</p>  
+    <ul id="major">  
+        <li>计算机</li>  
+        <li>会计</li>  
+        <li>管理学</li>  
+        <li>印刷工程</li>  
+    </ul>  
+</body>  
+</html>  

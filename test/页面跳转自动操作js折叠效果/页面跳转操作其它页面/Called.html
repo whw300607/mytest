@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../jquery.min.js">
+	
+</script>
+<script>
+var url = window.location.href;//获取当前浏览器的url  
+index = url.indexOf("flag");//判断当前url是否有flag，如果有，说明是从A页面跳转而来的，就执行下面的程序  
+  
+if(index !=-1) {//由A页面跳转而来  
+	document.getElementById("field").value="ds";
+}
+</script>
+</head>
+<body>
+	<input type="text" id="field" value="测试框" />
+</body>
+</html>

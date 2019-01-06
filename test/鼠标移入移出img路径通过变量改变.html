@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+	ul{}
+	ul li{float:left;margin-right:15px;}
+	img{width:300px;height:150px;}
+</style>
+<script type="text/javascript">
+$(document).ready(function(){
+	$(function () {  
+		$('ul').find('li').hover(function(){
+			var index=$(this).index()+4;															 
+			$(this).find('img').attr("src",+index+".jpg");
+		},function(){
+			var index=$(this).index()+1;															 
+			$(this).find('img').attr("src",+index+".jpg");
+		});
+	})
+});
+</script>
+</head>
+<body>
+	<ul>
+		<li><img src="1.jpg" /></li>
+		<li><img src="2.jpg" /></li>
+		<li><img src="3.jpg" /></li>
+	</ul>
+</body>
+</html>

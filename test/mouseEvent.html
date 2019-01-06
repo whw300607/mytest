@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<style type="text/css">
+
+</style>
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		/* click事件 */
+		/* $('.click p').click(function(){
+			$(this).css({"color":"white","background-color":"#98bf21","font-size":"20px","padding":"5px"});
+			}); */
+		/*dbclick事件 */
+		$(".dbclick p").dbclick(function(){
+			$(".dbclick p").hide();
+		});
+		/* mousedown事件 */
+		/* $(".mousedown button").mousedown(function(){
+		    $(".mousedown p").css({"color":"white","background-color":"#98bf21","font-size":"20px","padding":"5px"});
+		  }); */
+	});
+</script>
+</head>
+<body>
+	<div class="m">
+		<!-- click事件开始 -->
+		<div class="click mt20">
+			<p>click事件click事件click事件</p>
+		</div>
+		<!-- click事件结束 -->
+		<!-- dbclick事件开始 -->
+		<div class="dbclick mt20">
+			<p>dbclick事件dbclick事件dbclick事件</p>
+		</div>
+		<!-- dbclick事件结束 -->
+		<!-- mousedown事件开始 -->
+		<div class="mousedown mt20">
+			<p>这是一个段落。</p>
+			<button>切换</button>
+		</div>
+		<!-- mousedown事件结束 -->
+	</div>
+</body>
+</html>

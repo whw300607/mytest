@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>金融数据走势图并生成水印插件-psd素材网</title>
+
+<script type="text/javascript" src="js/jquery1101.js"></script>
+<script type="text/javascript" src="js/highcharts.js"></script>
+<script type="text/javascript">
+$(function () {
+	
+	$('#container').highcharts({
+		title: {//走势图标题
+			text: '铟行情(月)',
+			x: 90 ,
+			//style:{display:"none"}可隐藏
+		},
+		subtitle: {//走势图来源
+			text: '#',
+			x: 1000,
+			style:{display:"none"}//可隐藏
+		},
+		xAxis: {//X轴分类
+			categories: ['2013-11-06', '2013-11-07', '2013-11-08', '2013-11-09', '2013-11-10']
+		},
+		yAxis: {//Y轴会根据series的data数值自动分格并划分上下限
+			title: {
+				text: '(元/公斤)',//Y轴表示的文本
+				//style:{display:"none"}可隐藏
+			}
+		},
+		tooltip: {
+			valueSuffix: '(元/公斤)'//数据的后辍
+		},
+		legend:{//线条所表示的品种分类
+			enabled:0,//0为隐藏1为显示
+			layout: 'vertical',
+			align: 'right',
+			verticalAlign: 'middle',
+			borderWidth: 0
+		},
+		credits:{//制作人；可作为本站水印
+			text:"xwcms.com",
+			href:"http://www.xwcms.net",
+			position:{x:-250,y:-180},
+			style:{"z-index":"999"}
+		},
+		series: [{//可以为多个品种
+			name: '铟',
+			data: [4200, 4300, 4400, 4350, 4550]
+		},{
+			name: '铜',
+			data: [4100, 4400, 4600, 4150, 4250]
+		}]
+	});
+	  
+});
+</script>
+
+</head>
+<body>
+
+	<div id="container" style="width:600px;height:300px;margin:0 auto"></div>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=" utf-8">
+<meta name="author" content="http://www.jb51.net/" />
+<title>siblings3</title>
+<script type="text/javascript" src="../jquery-1.8.3/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	  $("p").siblings().css("color","red")
+	})
+</script>
+</head>
+<body>
+	<div class="first">
+	  <p>我是first下的p</p>
+	  <span>我是div下的span</span>
+	</div>
+	<div class="second">
+	  <ul>
+	    <li><a>我是li里的a</a></li>
+	  </ul>
+	  <p>我是second下的p</p>
+	</div>
+</body>
+</html>

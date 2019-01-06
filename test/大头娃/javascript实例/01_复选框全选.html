@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DOM操作实例</title>
+<script type="text/javascript">
+	/*
+		document.getElementById():返回拥有指定id"的第一个对象"的引用
+		document.getElementsByName(): 返回的是带有指定名称的对象的"集合"
+		document.getElementsByTagName(): 返回的带有指定签名的对象的"集合"
+	*/
+	window.onload=function(){
+		// 测试方法
+		var dom=document.getElementById("all");
+		console.info(dom);
+		var doms=document.getElementsByName("product");
+		console.info(doms);
+		doms=document.getElementsByTagName("input");
+		console.info(doms);
+	}
+	
+	function setAll(){
+		/* 此方案仅仅是在少量代码中有用,具有局限性 */
+		/*
+		var doms=document.getElementsByTagName("input");
+		for(var i=1;i<doms.length;i++){
+			doms[i].checked=doms[0].checked;	
+		} */
+		var dom=document.getElementById("all");
+		var doms=document.getElementsByName("product");
+		for(var i=0;i<doms.length;i++){
+			// 赋值给checked而非value
+			doms[i].checked=dom.checked;	
+		}
+	}
+</script>
+</head>
+
+<body>
+    <input type="checkbox" id="all" onclick="setAll()" /> 全选
+    <hr />
+    <input type="checkbox" name="product" /> 电脑<br />
+    <input type="checkbox" name="product" /> 手机<br />
+    <input type="checkbox" name="product" /> 空调<br />
+</body>
+</html>

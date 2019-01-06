@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>后代子代选择器</title>
+<style>
+div {
+	background-color: #ffffff;
+}
+
+/*  主DIV样式 */
+.mainDiv {
+	height: 200px;
+	width: 200px;
+	background-color: #ffff00;
+	padding: 20px;;
+}
+
+.mainDiv div {
+	background-color: red;
+}
+
+.mainDiv>.son {	 /*只选择.son，即使.son的子元素也不选*/
+	background-color: green;
+}
+
+.mainDiv>.son+.other {	/*.son下一个同级元素*/
+	font-size: 24px;
+	color:#fff;
+}
+</style>
+</head>
+<body>
+	<div class="mainDiv">
+		我是主DIV
+		<div class="son">
+			儿子
+			<div class="grandson">孙子</div>
+		</div>
+		<p class="other">其他亲戚他</p>
+		<p>这是段落</p>
+	</div>
+</body>
+</html>

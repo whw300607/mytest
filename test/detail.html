@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common1.css" />
+<link rel="stylesheet" type="text/css" href="css/global1.css" />
+<link rel="stylesheet" type="text/css" href="css/detail.css" />
+<script type="text/javascript"
+	src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+
+	});
+</script>
+</head>
+<body>
+	<div class="m mt_20 mb_20">
+		<!-- 左侧 -->
+		<div class="mr fl b_1">
+			<div class="detail-mian">
+				<div class="title">
+					<h2>
+						<a href="#">{$Data['pd_topic']}</a>
+					</h2>
+					<div class="down_tit">
+						网站类型<a href="#" target="_blank">{$Data['ps_name']}</a> 网址<a
+							href="{$Data['pd_title']}" target="_blank">{$Data['pd_title']}</a>
+						程序开发团队<a href="#" target="_blank">老夫网站开发</a>
+					</div>
+					<div class="abstract">
+						<h3>内容摘要</h3>
+						<p>
+							力争成为行业内视觉工程服务专家。为客户提供数字视觉体验的综合服务解决方案，力争成为行业内视觉工程服务专家。为客户提供数字视觉体验的综合服务解决方案，力争成为行业内视觉工程服务专家
+						</p>
+					</div>
+					<div class="down_see">
+						<a class="down_load" href="" target="_blank">下载源码<span></span></a>
+						<a class="see_detail" href="" target="_blank">查看详情<span></span></a>
+					</div>
+				</div>
+				<!-- 详情图片轮播 -->
+				<div id="detail-tab">
+					<ul class="big_pics">
+						<li><a href="#" target="_blank"><img
+								src="__PUBLIC__/images/Cases/Index/pic1.jpg" /></a>
+						<li>
+						<li><a href="#" target="_blank"><img
+								src="__PUBLIC__/images/Cases/Index/pic2.jpg" /></a>
+						<li>
+						<li><a href="#" target="_blank"><img
+								src="__PUBLIC__/images/Cases/Index/pic1.jpg" /></a>
+						<li>
+						<li><a href="#" target="_blank"><img
+								src="__PUBLIC__/images/Cases/Index/pic2.jpg" /></a>
+						<li>
+						<li><a href="#" target="_blank"><img
+								src="__PUBLIC__/images/Cases/Index/pic1.jpg" /></a>
+						<li>
+						<li><a href="#" target="_blank"><img
+								src="__PUBLIC__/images/Cases/Index/pic2.jpg" /></a>
+						<li>
+						<li><a href="#" target="_blank"><img
+								src="__PUBLIC__/images/Cases/Index/pic1.jpg" /></a>
+						<li>
+					</ul>
+					<div class="small_pics">
+						<span class="pre"></span> <span class="next"></span>
+						<ul>
+							<li><a href="#" target="_blank"><img
+									src="__PUBLIC__/images/Cases/Index/pic1.jpg" /></a>
+							<li>
+							<li><a href="#" target="_blank"><img
+									src="__PUBLIC__/images/Cases/Index/pic2.jpg" /></a>
+							<li>
+							<li><a href="#" target="_blank"><img
+									src="__PUBLIC__/images/Cases/Index/pic1.jpg" /></a>
+							<li>
+							<li><a href="#" target="_blank"><img
+									src="__PUBLIC__/images/Cases/Index/pic2.jpg" /></a>
+							<li>
+							<li><a href="#" target="_blank"><img
+									src="__PUBLIC__/images/Cases/Index/pic1.jpg" /></a>
+							<li>
+							<li><a href="#" target="_blank"><img
+									src="__PUBLIC__/images/Cases/Index/pic2.jpg" /></a>
+							<li>
+							<li><a href="#" target="_blank"><img
+									src="__PUBLIC__/images/Cases/Index/pic1.jpg" /></a>
+							<li>
+						</ul>
+					</div>
+				</div>
+				<!-- /详情图片轮播 -->
+				<!-- 网站简介 -->
+				<div class="introduction">
+					<h2>网站简介</h2>
+					<P>{$Data['pd_content']}</P>
+				</div>
+				<!-- /网站简介 -->
+				<!-- 客户评价 -->
+				<div class="introduction">
+					<h2>客户评价</h2>
+					<P>{$Data['pd_message']}</P>
+				</div>
+				<!-- /客户评价 -->
+				<!-- 上下一篇 -->
+				<div id="detail-paging">
+					<a class="fl" href="{:U('detail',array('uuid'=>$Prev['pd_uuid']))}">上一篇：{$Prev['pd_topic']}</a>
+					<a class="fr" href="{:U('detail',array('uuid'=>$Next['pd_uuid']))}">下一篇：{$Next['pd_topic']}</a>
+				</div>
+				<!-- /上下一篇 -->
+				<!-- 下载详情 -->
+				<lf:ibox id="download_detail" class="">
+				下载详情
+			</lf:ibox>
+				<!-- /下载详情 -->
+				<!-- 评论 -->
+				<lf:body class="" style="">
+
+				</lf:body>
+				<!-- /评论 -->
+			</div>
+		</div>
+		<!-- /左侧 -->
+		<!-- 右侧 -->
+		<div class="ml fr">
+			<!-- 热门资讯 -->
+			<lf:ibox id="" class="m_0">
+				<lf:head class="">
+					<strong>热门资讯</strong>
+				</lf:head>
+				<lf:body class="detail-information">
+					<ul>
+						<li><a href="{:U('News/Index/detail',array('id'=>''))}">中小企业通过搜索引擎付费广告，推广自己的产品和服务，到底有没有效果</a>
+						</li>
+						<li><a href="{:U('News/Index/detail',array('id'=>''))}">中小企业通过搜索引擎付费广告，推广自己的产品和服务，到底有没有效果</a>
+						</li>
+						<li><a href="{:U('News/Index/detail',array('id'=>''))}">中小企业通过搜索引擎付费广告，推广自己的产品和服务，到底有没有效果</a>
+						</li>
+						<li><a href="{:U('News/Index/detail',array('id'=>''))}">中小企业通过搜索引擎付费广告，推广自己的产品和服务，到底有没有效果</a>
+						</li>
+						<li><a href="{:U('News/Index/detail',array('id'=>''))}">中小企业通过搜索引擎付费广告，推广自己的产品和服务，到底有没有效果</a>
+						</li>
+						<li><a href="{:U('News/Index/detail',array('id'=>''))}">中小企业通过搜索引擎付费广告，推广自己的产品和服务，到底有没有效果</a>
+						</li>
+						<li><a href="{:U('News/Index/detail',array('id'=>''))}">中小企业通过搜索引擎付费广告，推广自己的产品和服务，到底有没有效果</a>
+						</li>
+						<li><a href="{:U('News/Index/detail',array('id'=>''))}">中小企业通过搜索引擎付费广告，推广自己的产品和服务，到底有没有效果</a>
+						</li>
+					</ul>
+				</lf:body>
+			</lf:ibox>
+			<!-- /热门资讯 -->
+			<!-- 广告位 -->
+			<div
+				style="height: 200px; background: #EEE; margin-top: 20px; margin-bottom: 20px;">
+
+			</div>
+			<!-- /广告位 -->
+			<!-- 模板推荐 -->
+			<lf:ibox id="">
+				<lf:head class="">
+					<strong>模板推荐</strong>
+				</lf:head>
+				<lf:body class="cases-template">
+					<ul>
+						<li><a href="{:U('')}" target="_blank"> <img
+								src="__PUBLIC__/images/Home/index/2.png" width="260"
+								height="200">
+						</a></li>
+					</ul>
+				</lf:body>
+			</lf:ibox>
+			<!-- /模板推荐 -->
+			<!-- 最新案例 -->
+			<lf:itab id="new_cases">
+				<!-- 切换按钮 -->
+				<lf:head class="">
+					<lf:item class=""></lf:item>
+					<lf:item class=""></lf:item>
+					<lf:item class=""></lf:item>
+				</lf:head>
+				<!-- /切换按钮 -->
+				<!-- 最新案例内容 -->
+				<lf:body class="">
+					<!-- 最新案例1 -->
+					<lf:item class="">
+
+					</lf:item>
+					<!-- /最新案例1 -->
+					<!-- 最新案例2 -->
+					<lf:item class="">
+
+					</lf:item>
+					<!-- /最新案例2 -->
+					<!-- 最新案例3 -->
+					<lf:item class="">
+
+					</lf:item>
+					<!-- /最新案例3 -->
+				</lf:body>
+				<!-- /最新案例内容 -->
+			</lf:itab>
+			<!-- /最新案例 -->
+			<!-- 关注的企业，关注的会员 -->
+			<lf:itab id="new_cases">
+				<!-- 头部 -->
+				<lf:head class="">
+					<lf:item class="">关注的企业</lf:item>
+					<lf:item class="">关注的会员</lf:item>
+				</lf:head>
+				<!-- /头部 -->
+				<!-- 内容 -->
+				<lf:body class="">
+					<!-- 关注的企业 -->
+					<lf:item class="">
+
+					</lf:item>
+					<!-- /关注的企业 -->
+					<!-- 关注的会员 -->
+					<lf:item class="">
+
+					</lf:item>
+					<!-- /关注的会员 -->
+				</lf:body>
+				<!-- /内容 -->
+			</lf:itab>
+			<!-- /关注的企业，关注的会员 -->
+			<!-- 您可能还喜欢的 -->
+			<lf:body class="may_like">
+
+			</lf:body>
+			<!-- /您可能还喜欢的 -->
+		</div>
+		<!-- /右侧 -->
+	</div>
+	<div class="m">
+		<!-- 最新发布，热门搜索，热门排行，热门推荐 -->
+		<lf:itab id="case_variety">
+			<!-- 选项卡 -->
+			<lf:head class="">
+				<lf:item class="">最新发布</lf:item>
+				<lf:item class="">热门搜索</lf:item>
+				<lf:item class="">热门排行</lf:item>
+				<lf:item class="">热门推荐</lf:item>
+			</lf:head>
+			<!-- /选项卡 -->
+			<!-- 内容 -->
+			<lf:body class="">
+				<lf:item class="">
+					<div class="bottom_cases clearfix">
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+					</div>
+				</lf:item>
+				<lf:item class="">
+					<div class="bottom_cases clearfix">
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+					</div>
+				</lf:item>
+				<lf:item class="">
+					<div class="bottom_cases clearfix">
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+					</div>
+				</lf:item>
+				<lf:item class="">
+					<div class="bottom_cases clearfix">
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+						<div class="case_single">
+							<div class="case_pic">
+								<a href="#" target="_blank" title="老夫官网"> <img alt="老夫官网"
+									src="__PUBLIC__/images/Cases/Index/1.jpg" width="160"
+									height="250" />
+								</a>
+								<div class="hover_bg hide">
+									<a class="magnify" href="#" target="_blank" title="浏览网址"><a>
+									<div class="hover_site_name">
+										<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+									</div>
+									<div class="tags_list clearfix">
+										<a class="tag_bg mr_5" href="#" target="_blank" title="CSS3">CSS3</a>
+										<a class="tag_bg mr_5" href="#" target="_blank" title="家具包装">家具包装</a>
+									</div>
+									<div class="see_download">
+										<a class="see_more mr_10" href="#" target="_blank"
+											title="查看更多">查看更多</a> <a class="download" href="#"
+											target="_blank" title="下载资源">下载资源</a>
+									</div>
+								</div>
+							</div>
+							<div class="site_name">
+								<a href="#" target="_blank" title="老夫官网">老夫官网</a>
+							</div>
+							<div class="tags_list clearfix">
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="CSS3">CSS3</a>
+								<a class="tag_bg mr_5 fl" href="#" target="_blank" title="家具包装">家具包装</a>
+								<a class="share" href="#" title="分享"></a> <a class="zan"
+									href="#" title="赞一下"></a>
+							</div>
+						</div>
+					</div>
+				</lf:item>
+			</lf:body>
+			<!-- /内容 -->
+		</lf:itab>
+		<!-- /最新发布，热门搜索，热门排行，热门推荐 -->
+	</div>
+</body>
+</html>

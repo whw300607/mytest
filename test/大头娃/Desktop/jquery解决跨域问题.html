@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery跨域解决方案</title>
+<script type="text/javascript" src="jquery-2.0.3.js"></script>
+<script type="text/javascript">
+    /* demo必须于后台一致,这样会导致不灵活 */
+	function demo(o){
+	    alert("demo:" + o);	
+	}
+	/* jquery 采用jsonp的方式来解决跨域问题
+	   如果指定了script或者jsonp类型，那么当从服务器接收到数据时，实际上是用了&lt;script&gt;标签(get请求)而不是XMLHttpRequest对象
+	*/
+	/*
+	function demo2(msg){
+		alert("demo2" + msg );	
+	}*/
+	
+	$.ajax({
+	   type: "POST",
+	   url: "http://127.0.0.1:8080/jsonp/servlet/JsonpServlet",
+	   data: "name=John",
+	   jsonp: 'methodName',
+	   dataType: 'jsonp',
+	   /* 动态指定回调的名称,服务需要获取此名称,并且此名称做为返回的函数名称*/
+	   jsonpCallback:'demo2',
+	   // 请求成功的回调函数, 默认情况下,返回的了demo2之后还会跳入到success回调函数中
+	   success: function(msg){
+		 alert("success:" + msg.age);
+	   }
+	});
+</script>
+<!-- 调用的的不一定的js文件. 返回的不一定是json数据,但是必须要用函数包装起来 -->
+<script src="temp.js"></script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>  
+<link rel="stylesheet" type="text/css" src="layui/layui/css/layui.css" />
+<script type="text/javascript" src="jquery.min.js"></script>
+<style type="text/css">
+	
+</style>
+<script type="text/javascript"> 
+
+</script>
+</head>
+<body>
+<input id="aaaaaa" name="keyword" value="23">
+<ul id="ul">
+	<li>12313</li>
+	<li>12313</li>
+	<li>233</li>
+	<li>12313</li>
+	<span>4561223</span>
+</ul>
+<script>
+    $(function () {
+        setHeightKeyWord('ul', $("#aaaaaa").val(), '#f7702e');
+    });
+
+    function setHeightKeyWord(id, keyword, color, bold) {
+        if (keyword == "") return;
+        var replaceText
+        if (bold)
+            replaceText = "<b style='color:" + color + ";'>$1</b>";
+        else
+            replaceText = "<font style='color:" + color + ";'>$1</font>";
+        var arrayWord = keyword.split(',');
+        var nodes = $('li,span');//注意修改子对象选择器
+        for (var w = 0; w < arrayWord.length; w++) {
+            for (var i = 0; i < nodes.length; i++) {
+                var r = new RegExp("(" + arrayWord[w].replace(/[(){}.+*?^$|\\\[\]]/g, "\\$&") + ")", "ig");
+                nodes[i].innerHTML = nodes[i].innerHTML.replace(r, replaceText);
+            }
+        }
+    }
+</script>
+</body>
+</html>

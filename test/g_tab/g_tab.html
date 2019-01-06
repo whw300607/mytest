@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>3
+<style type="text/css">
+	.g-tab {
+	height: 34px;
+	padding: 20px;
+}
+
+.g-tab li {
+	list-style-type:none;
+	float: left;
+	line-height: 33px;
+	_display: inline;
+	margin-right: 13px;
+}
+
+.g-tab li a {
+	float: left;
+	text-align: center;
+	color: #666;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 15px;
+	background: url(g-tab-bg.gif) 0px 0px no-repeat;
+}
+
+.g-tab li a span {
+	float: left;
+	height: 34px;
+	display: block;
+	padding-right: 15px;
+	background: url(g-tab-bg.gif) right -78px
+		no-repeat;
+}
+
+
+.g-tab li a:hover {
+	text-decoration: none;
+	color: #fff;
+	background: url(g-tab-bg.gif) 0 -39px no-repeat;
+}
+
+.g-tab li a:hover span {
+	float: left;
+	line-height: 30px;
+	background: url(g-tab-bg.gif) right -117px no-repeat;
+}
+	
+</style>
+</head>
+<body>
+<ul class="tabbtn g-tab" id="hom_tab_btn">
+	<li class="current"><a href="javascript:;" class="video"><span>电影</span></a></li>
+	<li><a href="javascript:;" id="btn_Com" class="music"><span>音乐</span></a></li>
+	<li><a href="javascript:;" class="game"><span>游戏</span></a></li>
+	<li><a href="javascript:;" class="book"><span>书刊</span></a></li>
+	<li><a href="javascript:;" class="app"><span>APP</span></a></li>
+	<li><a href="javascript:;" style="padding-left: 20px;" class="life"><span style="padding-right: 20px;">生活杂烩</span></a></li>
+</ul>
+</body>
+</html>

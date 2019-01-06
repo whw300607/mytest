@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+<head runat="server">  
+    <title>setTimeout</title> 
+    <script type="text/javascript" src="jquery.min.js">
+    	
+    </script>  
+    <script type="text/javascript">
+    $(document).ready(function() { 
+        function jump(count) { 
+            window.setTimeout(function(){ 
+                count--; 
+                if(count > 0) { 
+                    $('#timeLeft').text(count); 
+                    jump(count); 
+                } else { 
+                    location.href="U:{Home/Index/index}"; 
+                } 
+            }, 1000); 
+        } 
+        jump(3); 
+    }); 
+    </script>
+</head>  
+<body>  
+    <form id="form1" runat="server">  
+        <div id='timeLeft'>3  
+        </div>  
+    </form>  
+</body>  
+</html>  

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>  
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript">
+    	//1显示信息的命令
+    	console.log('hello');
+        console.info('信息');
+        console.error('错误');
+        console.warn('警告');
+        //2占位符
+        console.log("%d年%d月%d日",2011,3,26);
+        //3、信息分组
+        console.group("第一组信息");    　　　　
+	    console.log("第一组第一条:我的博客(http://cllgeek.github.io)");
+	    console.log("第一组第二条:blog(http://www.cllgeek.com)");
+	    console.groupEnd();
+	    console.group("第二组信息");
+	    console.log("第二组第一条:程序爱好者： 495489065");
+	    console.log("第二组第二条:欢迎你加入");
+	    console.groupEnd();
+	    //4、查看对象的信息
+	    function cat(name, age, score){
+            this.name = name;
+            this.age = age;
+            this.score = score;
+        }
+        var c = new cat("miao", 2, [6,8,7]);
+        console.dir(c);
+        //6、判断变量是否是真
+        function dog(name, age, score){
+            this.name = name;
+            this.age = age;
+            this.score = score;
+        }
+        var c = new dog("wang", 2, [6,8]);
+        console.assert(c.score.length==3, "Assertion of score length failed");
+        //7、追踪函数的调用轨迹
+        /*函数是如何被调用的，在其中加入console.trace()方法就可以了*/ 　　
+        function add(a, b) {
+            console.trace();　　　　
+            return a + b;　　
+        }　　
+        var x = add3(1, 1);　　
+        function add3(a, b) {
+            return add2(a, b);
+        }　　
+        function add2(a, b) {
+            return add1(a, b);
+        }　　
+        function add1(a, b) {
+            return add(a, b);
+        }
+        //8、计时功能
+        console.time("控制台计时器一");　　
+        for (var i = 0; i < 1000; i++) {　　　　
+            for (var j = 0; j < 1000; j++) {}　　
+        }　　
+        console.timeEnd("控制台计时器一");
+        //9、console.profile()的性能分析
+        function All() {
+            alert(11);　　　　
+            for (var i = 0; i < 10; i++) {
+                funcA(1000);
+            }　　　　
+            funcB(10000);　　
+        }
+        　　
+        function funcA(count) {　　　　
+            for (var i = 0; i < count; i++) {}　　
+        }
+        　　
+        function funcB(count) {　　　　
+            for (var i = 0; i < count; i++) {}　　
+        }
+        　　
+        console.profile('性能分析器');　　
+        All();　　
+        console.profileEnd();
+
+
+    </script>
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+	<div id="info">
+        <h3>我的博客：cllgeek.github.io</h3>
+        <p>程序爱好者:495489065,欢迎你的加入</p>
+    </div>
+    <script type="text/javascript">
+	//5、显示某个节点的内容
+    var info = document.getElementById('info');
+    console.dirxml(info);
+    </script>
+</body>
+</html>

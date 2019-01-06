@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>TR、Td 操作</title>
+   <style type="text/css">
+		body{
+			font-size:13px;
+			line-height:25px;
+			}
+		table{
+			border-top: 1px solid #333;
+			border-left: 1px solid #333;
+			width:300px;
+		}
+		td{
+			border-right: 1px solid #333;
+			border-bottom: 1px solid #333;
+			}
+		.center{
+			text-align:center;
+		}
+		.title{
+			text-align:center;
+			font-weight:bold;
+			background-color: #cccccc;
+		}  
+	</style>
+    <script type="text/javascript">
+    	// 在表格中填入新行
+		function addRow(){
+			// 行标从0开始,insertRow是在当前行之前插入
+			var newRow=document.getElementById("myTable").insertRow(1);
+			var cel1=newRow.insertCell(0);
+			cel1.innerHTML="java编程思想!";
+			var cel2=newRow.insertCell(1);
+			cel2.innerHTML="&yen;98.50";
+			cel2.className='center';
+		}
+		
+		function delRow(){
+			// 删除指定行,默认是从0开始
+			document.getElementById("myTable").deleteRow(1);	
+		}
+		
+		function updateRow(){
+			// 获取当前的第一个tr,并且设置样式
+			var trow=document.getElementById("myTable").rows[0];
+			trow.className="title";
+		}
+    </script>
+
+	
+</head>
+<body>
+	<table border="0" cellspacing="0" cellpadding="0" id="myTable">
+      <tr id="row1">
+        <td>书名</td>
+        <td>价格</td>
+      </tr>
+      <tr id="row2">
+        <td>看得见风景的房间</td>
+        <td class="center">&yen;30.00</td>
+      </tr>
+      <tr id="row3">
+        <td>60个瞬间</td>
+        <td class="center">&yen;32.00</td>
+      </tr>
+    </table>
+    <input name="b1" type="button" value="增加一行" onClick="addRow()" />
+    <input name="b2" type="button" value="删除第2行" onClick="delRow()" />
+    <input name="b3" type="button" value="修改标题" onClick="updateRow()" />
+</body>
+</html>

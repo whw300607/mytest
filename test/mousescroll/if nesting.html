@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="../css/common.css" />
+<link rel="stylesheet" type="text/css" href="../css/global.css" />
+<link rel="stylesheet" type="text/css" href="../css/font-awesome.css" />
+<script type="text/javascript" src="../../classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+	
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var scrollFunc=function(e){ 
+			e=e || window.event; 
+			if(e.wheelDelta){//IE/Opera/Chrome 
+				if(e.wheelDelta==120) 
+				{ 
+				//向上滚动事件 
+				alert(e.wheelDeta +"向上"); 
+				}else
+				{ 
+				//向上滚动事件 
+				alert(e.wheelDeta +"向上"); 
+				} 
+			}
+			else if(e.detail){ 
+				//Firefox 
+				if(e.detail==-3) { 
+				//向上滚动事件<br> 
+				alert(e.detail +"向上"); 
+				}else 
+				{ 
+				//向下滚动事件<br> 
+				alert(e.detail +"向下 "); 
+				} 
+			} 
+			}; 
+			if(document.addEventListener){ 
+			//adding the event listerner for Mozilla 
+			document.addEventListener("DOMMouseScroll" ,scrollFunc, false); 
+			} 
+			//IE/Opera/Chrome 
+			window.onmousewheel=document.onmousewheel=scrollFunc;
+	});
+</script>
+</head>
+<body>
+	<div class="m">
+		
+	</div>
+</body>
+</html>

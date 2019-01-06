@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../jquery-1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		function foo() {
+		 alert('hi, js');
+		}
+		foo();
+		---------------------------------
+		var foo = function () {
+		 alert('hi, js');
+		}
+		foo();
+		------------------------------------
+		var foo = function () {
+		 alert('hi, js');
+		}
+		(foo)();
+		-----------------------------------
+		(function () {
+		 alert('hi, js');
+		})();
+	});
+</script>
+</head>
+<body>
+	
+</body>
+</html> 

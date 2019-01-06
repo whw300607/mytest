@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>菜鸟教程(runoob.com)</title>
+<script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+<body>
+ 
+<div id="log"></div>
+<script>
+$(function () { 
+	// each处理一维数组
+	  var arr1 = [ "aaa", "bbb", "ccc" ];      
+	  $.each(arr1, function(i,val){      
+	      console.log(i);   
+	      console.log(val);
+	  });
+	  // 处理json数据，例如ajax的返回值     
+	  var obj = { one:1, two:2, three:3};      
+	　$.each(obj, function(key, val) {      
+		console.log(key); 
+		console.log(val);
+	  });
+	
+	
+	var object1 = {
+		apple: 0,
+		banana: {weight: 52, price: 100},
+		cherry: 97
+	};
+	var object2 = {
+		banana: {price: 200},
+		durian: 100
+	};
+	/* object2 合并到 object1 中 */
+	$.extend(object1, object2);
+	var printObj = typeof JSON != "undefined" ? JSON.stringify : function(obj) {
+		var arr = [];
+		$.each(obj, function(key, val) {
+			var next = key + ": ";
+			next += $.isPlainObject(val) ? printObj(val) : val;
+			arr.push( next );
+		});
+		return "{ " +  arr.join(",") + " }";
+	};
+	$("#log").append( printObj(object1) );
+})
+</script>
+ 
+</body>
+</html>

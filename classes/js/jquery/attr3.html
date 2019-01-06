@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			$("img").attr("width",function(n,v){
+				return v-20;
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<img src="../a.jpg" width="120" height="222" />
+	<br />
+	<button type="button">减少图像的宽度20px</button>
+</body>
+</html>

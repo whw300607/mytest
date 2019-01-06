@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+	.m{text-align:center;font-size:40px;padding-top:100px;}
+</style>
+<script type="text/javascript">
+	x = 105
+	function addSecond() {
+		x = x - 1
+		$(".m").text(function() {
+			return x;
+		});
+		if (x == 0) {
+			alert("over");
+		}
+	}
+	//使用方法名字执行方法 
+	var t1 = window.setInterval(addSecond, 1000);
+	//使用字符串执行方法 
+	/* var t2 = window.setInterval("addSecond()",2000); */
+	//去掉定时器的方法
+	/* window.clearInterval(t1);  */
+	/* window.clearInterval(t2);  */
+</script>
+</head>
+<body>
+	<div class="m">
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>$(this)会根据上下文改变所指对象</title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+	li{float:left;width:35px;height:20px;line-heigth:20px;text-align:center;}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("ul li").each(function(){
+			alert($(this).html());
+			$(this).find("a").click(function(){
+				alert($(this).html());
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="m">
+		<ul>
+			<li><a href="javascript:void(0)">aaa</a></li>
+			<li><a href="javascript:void(0)">bbb</a></li>
+			<li><a href="javascript:void(0)">ccc</a></li>
+			<li><a href="javascript:void(0)">ddd</a></li>
+		</ul>
+	</div>
+</body>
+</html>

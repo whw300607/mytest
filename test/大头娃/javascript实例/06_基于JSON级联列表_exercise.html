@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>基于数组级联列表</title>
+    <script type="text/javascript">
+		// 1: JSON: 相关复习: JSON.parse() JSON.stringify()的使用  for in 循环json格式
+		
+		// 2: 采用JSON来存储省市信息和对应的编码
+		
+		window.onload=function(){
+		// 3: 对省会下拉列表进行赋值
+		}
+		
+		function setCity(){
+			// 首先二级菜单必须还原
+			
+			// 获取被选中省会的值
+			
+			// 如果没有选择任何省会信息则直接返回
+			
+			// 通过选中的值获取二级菜单的json数据
+		    
+		}
+		
+		
+		
+    </script>
+</head>
+<body>
+   <!-- 数据的三种存储方式: 
+        	1: 数据库: 安全高、可以存储有结构但是耗资源
+            2: properties: 存储非敏感数据,且Key value格式,省资源的
+            3: XML: 存储非敏感数据,且支持有结构 目前一般用于配置文件
+            4: 硬编码: 主要存储非敏感数据,且不改不的数据
+   -->
+   <select id="province" onChange="setCity()">
+   		<option value="">--选择省会--</option>
+   </select>
+   <select id="city">
+   		<option value="">--选择城市--</option>
+   </select>
+</body>
+</html>

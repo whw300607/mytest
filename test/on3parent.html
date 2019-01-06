@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{margin:0;padding:0;}
+		ul{list-style: none;}
+		.box{width:410px;height:240px;margin:50px auto;}
+		.box ul{height:40px;}
+		.box ul li{width:100px;line-height:40px;text-align:center;float:left;cursor:pointer;}
+		.box ul li.select{background:#eee;border:1px solid #ccc;border-bottom:none;}
+		.box .DIV{width:340px;height:70px;border:1px solid #ccc;background:#eee;padding:30px;}
+		.box .DIV div{height:30px;line-height:30px;}
+		.box .DIV .hide{display:none;}
+	</style>
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<li class="select">淘股神</li>
+				<li click="">收益榜</li>
+				<li click="">综合榜</li>
+				<li click="">股神榜</li>
+			</ul>
+			<div class="DIV">
+				<div class="item">稳健投资，主攻中长线波段，有独立的盈利模式</div>
+				<div class="item hide">大家早上好，欢迎来到金菊投资股票直播室。这里有最及时的大盘解析，</div>
+				<div class="item hide">不管您是股市新人，还是投资高手，这里都会有让您留下来的理由。</div>
+				<div class="item hide">希望每一位初到直播室的朋友，都能够静下心来，认真的对直播室进行一段跟踪，
+					认真的感受一下本直播室的特色</div>
+			</div>
+		</div>
+		
+		<div class="box">
+			<ul>
+				<li class="select">淘股神</li>
+				<li click="">收益榜</li>
+				<li click="">综合榜</li>
+				<li click="">股神榜</li>
+			</ul>
+			<div class="DIV">
+				<div class="item">稳健投资，主攻中长线波段，有独立的盈利模式</div>
+				<div class="item hide">大家早上好，欢迎来到金菊投资股票直播室。这里有最及时的大盘解析，</div>
+				<div class="item hide">不管您是股市新人，还是投资高手，这里都会有让您留下来的理由。</div>
+				<div class="item hide">希望每一位初到直播室的朋友，都能够静下心来，认真的对直播室进行一段跟踪，
+					认真的感受一下本直播室的特色</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="classes/js/jquery-3.0.0/jquery-3.0.0.min.js" ></script>
+<script>
+	$(".box").find("li").click(function(){
+			$(this).addClass("select").siblings().removeClass("select");
+			$(this).parent().parent().find(".item").eq($(this).index()).removeClass("hide").siblings().addClass("hide");
+	});
+</script>

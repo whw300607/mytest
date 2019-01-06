@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+</style>
+<script type="text/javascript" src="../jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var person = { // 用 大括号括声明一个json.
+				"name":"lz"  //key是name, value是lz;
+		};
+		alert(person.name);
+		var person2 = {
+				"name":"lz",  //有多个 key,value 用,号分开.
+				"say" : function(){
+					alert('hello word!');
+					}
+		}
+		person2.say();/* 其中 say:function(){alert('hello word!')}; 类似于var say = function(){alert('hello word!');}; */
+	});
+</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+/* 客服热线  */
+.clearfix {
+	*zoom: 1;
+}
+
+.m {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+#headtop {
+	height: 30px;
+	line-height: 30px;
+	color: #666;
+}
+
+#headtop .fl {
+	width: 400px;
+}
+
+#headtop ul li {
+	float: left;
+	font-size: 12px;
+	list-style-type: none;
+}
+
+#headtop ul li span {
+	padding: 0 14px;
+	color: #fff;
+}
+
+#headtop ul li a {
+	font-size: 12px;
+}
+
+#headtop ul li a:hover {
+	color: #666;
+}
+
+#headtop ul li a.show {
+	display: block;
+	width: 20px;
+	height: 18px;
+	margin: 6px 6px;
+	font-size: 12px;
+	background: url(qqq_logo.png) no-repeat;
+	transition: all .3s ease-in-out;
+	background-repeat: no-repeat;
+}
+
+#headtop ul li .show .weixin {
+	width: 300px;
+	height: 165px;
+	display: none;
+	position: absolute;
+	top: 50px;
+	color: #16c7fb;
+	background-color: #fff;
+	border: 1px solid #d7dadb;
+	padding: 4px;
+	text-align: center;
+	border-radius: 2px;
+	z-index: +1;
+}
+
+#headtop ul li .show .weixin .weixin-img {
+	width: 150px;
+	float: left;
+}
+
+#headtop ul li .show .weixin .weixin-img img {
+	width: 130px;
+	height: 130px;
+}
+
+#headtop ul li .show p {
+	color: #16c7fb;
+	text-align: center;
+}
+
+#headtop ul li .show .weibo-cont {
+	position: absolute;
+	top: 50px;
+	width: 150px;
+	color: #16c7fb;
+	background-color: #fff;
+	border: 1px solid #d7dadb;
+	display: none;
+	padding: 4px;
+	text-align: center;
+	border-radius: 2px;
+	z-index: +1;
+}
+
+#headtop ul li .show .weibo-cont .weibo-title {
+	color: #4a4a4a;
+	white-space: nowrap;
+}
+
+#headtop ul li .show .weibo-cont .weibo-link {
+	font-size: 14px;
+	color: #16c7fb;
+	white-space: nowrap;
+}
+
+#headtop ul li a.chat {
+	background-position: -57px 2px;
+}
+
+#headtop ul li a.chat:hover {
+	background-position: -57px -15px;
+}
+
+#headtop ul li a.weibo {
+	background-position: -28px 2px;
+}
+
+#headtop ul li a.weibo:hover {
+	background-position: -28px -15px;
+}
+
+#headtop ul li a.qq {
+	background-position: 2px 2px;
+}
+
+#headtop ul li a.qq:hover {
+	background-position: 2px -15px;
+}
+
+#headtop .fr {
+	width: 300px;
+}
+</style>
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//法1
+		$("ul li .show").on("mouseover",function(){
+			$(this).children("div").show();
+		}).on("mouseout",function(){
+			$(this).children("div").hide();
+		}); 
+		//法2
+		/* $("ul li .show").hover( 
+				function(){ 
+					$(this).children("div").show(); 
+					},
+				function(){ 
+					$(this).children("div").hide(); 
+					}  
+					); */
+					
+	});
+</script>
+</head>
+<body>
+	<header>
+		<!-- 客服热线  -->
+		<div id="headtop">
+			<div class="m clearfix">
+				<ul class="fl">
+					<li><a href="javascript:;" class="show chat">
+							<div class="weixin">
+								<div class="weixin-img">
+									<p class="weixin-fuwu">[ 服务号 ]</p>
+									<p class="weixin-fuwu-mg">
+										<img src="__PUBLIC__/images/weixin.jpg" />
+									</p>
+								</div>
+								<div class="weixin-img">
+									<p class="weixin-fuwu">[ 订阅号 ]</p>
+									<p class="weixin-fuwu-mg">
+										<img src="__PUBLIC__/images/weixin.jpg" />
+									</p>
+								</div>
+							</div>
+					</a></li>
+					<li><a href="javascript:;" class="show weibo">
+							<div class="weibo-cont">
+								<p>
+									<span class="weibo-title">点击关注点淘股神微博 :</span> <span
+										class="weibo-link">@淘股神</span>
+								</p>
+							</div>
+					</a></li>
+					<li><a href="javascript:;" class="show qq">
+							<div class="weibo-cont">
+								<p class="qq-title">淘股神官方二群:</p>
+								<p>521451062</p>
+							</div>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- /客服热线  -->
+	</header>
+</body>
+</html>

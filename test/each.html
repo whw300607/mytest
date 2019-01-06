@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<script type="text/javascript"
+	src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("button").click(function() {
+			$("li").each(function() {
+				alert($(this).text());
+			});
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="m">
+		<button>输出每个列表项的值</button>
+		<ul>
+			<li>Coffee</li>
+			<li>Milk</li>
+			<li>Soda</li>
+		</ul>
+	</div>
+</body>
+</html>

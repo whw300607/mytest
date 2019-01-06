@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<link rel="stylesheet" type="text/css" href="css/common.css" />
+<link rel="stylesheet" type="text/css" href="css/global.css" />
+<script type="text/javascript" src="../classes/js/jquery-2.1.4/jquery.js"></script>
+<style type="text/css">
+	
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+	});
+</script>
+</head>
+<body>
+	<div class="m">
+		<form>
+			<label  for="paypal">支付宝</label>     <!-- label里边必须加for而且值和对应input的id相等 -->
+			<input type="radio" name="payMethod" id="paypal" />
+			<br />
+	    	<label for="finance">财务通</label>
+	    	<input type="radio" name="payMethod" id="finance" />
+	    </form>	
+	    <form>
+			<label for="male">Male</label>
+			<input type="radio" name="sex" id="male" />
+			<br />
+			<label for="female">Female</label>
+			<input type="radio" name="sex" id="female" />
+		</form>
+	</div>
+</body>
+</html>

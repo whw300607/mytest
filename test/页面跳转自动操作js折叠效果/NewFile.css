@@ -1,0 +1,101 @@
+@CHARSET "UTF-8";
+{
+        /*border:1px solid red;*/
+    }
+    .account-box{
+        width:345px;
+        margin:0 auto;
+        margin-top:60px;
+        height:40px;
+        line-height:40px;
+    }
+    .code-box {
+        width:300px;
+        margin:0 auto;
+        margin-top:10px;
+        height:40px;
+        line-height:40px;
+    }
+    .setting-Withdrawals-true>.account-box>ul>.first {
+        width:120px;
+        float:left;
+        text-align:right;
+        padding-right:20px;
+        font-size:14px;
+        color:#666;
+    }
+    .code-box>ul>li>.obtain-input input{
+        height:36px;
+        width:80px;
+        padding-left: 5px;
+        border:1px solid #ccc;
+    }
+    .obtain-input{
+        float:left;
+    }
+    .obtain-button {
+        float:right;
+    }
+    .code-box .obtain-button {
+        width:107px;
+        height:40px;
+        line-height:40px;
+        text-align: center;
+        background-color:#3bb5ff ;
+        color:#fff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    sup {
+        color:red;
+    }
+    .first {
+        float:left;
+        width:100px;
+        height:40px;
+        text-align:right;
+        padding-right:20px;
+        font-size:14px;
+        color:#666;
+    }
+    .true-name{
+        width:310px;
+        margin:0 auto;
+        margin-top:10px;
+        height:40px;
+        line-height:40px;
+    }
+    .true-name .second input {
+        width: 200px;
+        height:36px;
+        border:1px solid #ccc;
+        padding-left:5px;
+        font-size:12px;
+        /*color:#ccc;*/
+        font-family: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif;
+    }
+    .submit-box{
+        width:300px;
+        margin:0 auto;
+        margin-top:10px;
+    }
+    .submit-box .second input{
+        color:#fff;
+        background-color: #3388ff;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        width:105px;
+        height:40px;
+        line-height: 40px;
+        text-align:center;
+        font-size:14px;
+        border:none;
+        outline:none;
+        font-family: "Microsoft YaHei", "微软雅黑", helvetica, arial, verdana, tahoma, sans-serif;
+    }
+	.true-name .second.forgot-input input {
+	    width: 100px;
+	}

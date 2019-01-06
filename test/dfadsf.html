@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+a{ width:40px; height:40px; line-height:40px; text-align:center; display:inline-block; background:#F00; margin-left:30px; }
+div{ width:300px; height:300px; background:#000; }
+</style>
+<script>
+
+window.onload = function(){
+	
+	var aA = document.getElementsByTagName('a');
+	var aDiv = document.getElementsByTagName('div');
+	var bBtn =true;
+		
+	for(var i=0;i<aA.length;i++){
+		
+		aA[i].i = i;
+		
+		aA[i].onclick = function(){
+			
+			Scroll(aDiv[this.i]);
+			
+			};
+		
+		}
+	
+	function Scroll(obj/*要滚动到的位置的元素*/){
+		
+		var scrollHeight = obj.offsetTop;
+		
+        clearInterval(obj.timer);
+		
+		if(bBtn){    
+		
+		    bBtn = false;      
+			obj.timer = setInterval(function(){
+				
+				var bodyScroll = document.documentElement.scrollTop || document.body.scrollTop;
+				  
+				if(bodyScroll == scrollHeight ){
+					
+					clearInterval(obj.timer);
+					bBtn = true;
+					
+					}
+					 
+				var iSpeed = (scrollHeight - bodyScroll) / 5;
+					 
+				iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);   
+				bodyScroll += iSpeed;
+				document.body.scrollTop = bodyScroll;
+				document.documentElement.scrollTop = bodyScroll;
+						
+				},50);
+			
+		   }
+                 
+        }
+	
+	};
+
+</script>
+</head>
+
+<body>
+<a href="javascript:;">t</a><a href="javascript:;">m</a><a href="javascript:;">b</a>
+<div id="div1" style="margin-top:500px;">111111</div>
+<div id="div2" style="margin-top:1000px;">111111</div>
+<div id="div3" style="margin-top:1500px;margin-bottom:1000px;">111111</div>
+</body>
+</html>

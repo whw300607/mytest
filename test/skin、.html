@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="switchjs.js"></script>
+</head>
+
+<body>
+<div align="center">
+  <p><a href="#" onclick="changestyle(0,'style1.css');return false;">样式一</a>    <a href="#" onclick="changestyle(0,'style2.css');return false;">样式二</a>     <a href="#" onclick="changestyle(0,'style3.css');return false;">样式三</a>  </p>
+  <p>换肤选择：
+    <label>
+    <select name="selectstyle" id="selectstyle" onchange="changestyle(0,this.value)">
+      <option value="style1.css">样式一</option>
+      <option value="style2.css">样式二</option>
+      <option value="style3.css">样式三</option>
+        </select>
+    </label>
+    <br />
+    <br />
+    <br />
+    </p>
+</div>
+<table width="278" height="156" border="0" align="center" cellpadding="0" cellspacing="0" class="tablestyle">
+  <tr>
+    <td width="98" align="center">用户名：</td>
+    <td width="180" align="left"><label>
+      <input type="text" name="username" id="username" />
+    </label></td>
+  </tr>
+  <tr>
+    <td align="center">密码：</td>
+    <td align="left"><label>
+      <input type="text" name="userpwd" id="userpwd" />
+    </label></td>
+  </tr>
+  <tr>
+    <td align="center">邮件：</td>
+    <td align="left"><label>
+      <input type="text" name="useremail" id="useremail" />
+    </label></td>
+  </tr>
+  <tr>
+    <td align="center">手机：</td>
+    <td align="left"><label>
+      <input type="text" name="usermobile" id="usermobile" />
+    </label></td>
+  </tr>
+  <tr>
+    <td align="center">住址：</td>
+    <td align="left"><label>
+      <input type="text" name="useraddress" id="useraddress" />
+    </label></td>
+  </tr>
+</table>
+<script type="text/javascript">
+function changestyle(i,cssfile)
+{
+    var linkobj=document.getElementsByTagName("link");
+    linkobj.setAttribute("href","css/"+cssfile);
+    createCookie("defaultcss",cssfile,7);
+}
+
+function createCookie(name,value,days)
+{
+    if (days)
+    {
+        var date = new Date();
+        date.setTime(date.getTime()+(days*24*60*60*1000));
+        var expires = "; expires="+date.toGMTString();
+    }
+    else var expires = "";
+    document.cookie = name+"="+value+expires+"; path=/";
+}
+function readCookie(name)
+{
+    var nameEQ = name + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0;i < ca.length;i++)
+    {
+        var c = ca;
+        while (c.charAt(0)==' ') c = c.substring(1,c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    }
+    return null;
+}
+
+var csscookie=readCookie("defaultcss");
+if(csscookie) changestyle(0,csscookie);
+</script>
+</body>
+</html>

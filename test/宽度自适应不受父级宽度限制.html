@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>宽度自适应不受父级宽度限制</title>
+ <style type="text/css">
+	#aa{
+	 width: 800px;
+            height: 200px;
+            overflow: hidden;
+            margin: 0px auto;
+            margin-top: 10px;
+	 background:#ea5415;
+	}
+	#cc{
+	  height: 200px;
+            width: auto;   
+            position: absolute;
+	 background:#fff;		
+	}
+	.vvv{
+	  position: relative;
+            width: 200px;
+            height: 190px;
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            padding-top: 5px;
+	 background:#000;		
+	}
+</style>
+</head>
+<body>
+<div id="aa" >
+    <div id="cc">
+       <div class="vvv" style="background:red;"></div>
+       <div class="vvv" style="background:yellow;" ></div>
+       <div class="vvv" style="background:blue;"></div>
+    </div>
+</div>
+</body>
+</html>

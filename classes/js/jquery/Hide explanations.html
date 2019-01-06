@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title></title>
+<style type="text/css">
+	.place{background:red;}
+</style>
+<script type="text/javascript" src="../jquery-1.11.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".place .hide").click(function(){
+			$(this).parents(".place").hide("slow");
+		});
+	});
+</script>
+</head>
+<body>
+	<h2>美国</h2>
+	<div class="place">
+		<button class="hide" type="button">点击隐藏</button>
+		<p>
+			联系人：考虑看看<br />
+			电话：4214324<br />
+		</p>
+	</div>
+	<h2>中国</h2>
+	<div class="place">
+		<button class="hide" type="button">点击隐藏</button>
+		<p>
+			联系人：的萨芬<br />
+			电话：56212354<br />
+		</p>
+	</div>
+</body>
+</html> 
